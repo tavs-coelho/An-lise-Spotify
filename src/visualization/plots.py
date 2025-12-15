@@ -24,8 +24,9 @@ class SpotifyVisualizer:
         """
         try:
             plt.style.use(style)
-        except:
+        except OSError:
             plt.style.use('default')
+            logger.warning(f"Style '{style}' not found, using default style")
         
         # Set Spotify-like colors
         self.colors = {

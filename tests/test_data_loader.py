@@ -4,11 +4,7 @@ Tests for data loader module.
 
 import pytest
 import pandas as pd
-import sys
 from pathlib import Path
-
-# Add parent directory to path
-sys.path.append(str(Path(__file__).parent.parent))
 
 from src.data.loader import DataLoader
 from src.utils.config import load_config

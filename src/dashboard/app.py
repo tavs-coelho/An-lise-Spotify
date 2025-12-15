@@ -8,14 +8,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
-import sys
-
-# Add parent directory to path
-sys.path.append(str(Path(__file__).parent.parent.parent))
+import logging
 
 from src.utils.config import load_config
 from src.data.loader import DataLoader
 from src.models.predictor import PopularityPredictor
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 # Page configuration
 st.set_page_config(

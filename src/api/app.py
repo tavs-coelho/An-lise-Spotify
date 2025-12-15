@@ -8,13 +8,13 @@ from typing import List, Dict, Any
 import numpy as np
 import pandas as pd
 from pathlib import Path
-import sys
-
-# Add parent directory to path
-sys.path.append(str(Path(__file__).parent.parent.parent))
+import logging
 
 from src.utils.config import load_config
 from src.models.predictor import PopularityPredictor
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 # Load configuration
 config = load_config('config.yaml')
@@ -31,7 +31,7 @@ predictor = PopularityPredictor(config)
 try:
     predictor.load_model('models/xgboost_model.pkl', 'XGBoost')
 except FileNotFoundError:
-    print("Warning: Model file not found. Please train the model first.")
+    logger.warning("Model file not found. Please train the model first by running: python main.py")
 
 
 class MusicFeatures(BaseModel):

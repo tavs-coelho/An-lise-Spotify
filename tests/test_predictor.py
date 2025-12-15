@@ -5,11 +5,7 @@ Tests for predictor module.
 import pytest
 import pandas as pd
 import numpy as np
-import sys
 from pathlib import Path
-
-# Add parent directory to path
-sys.path.append(str(Path(__file__).parent.parent))
 
 from src.models.predictor import PopularityPredictor
 from src.data.loader import DataLoader
