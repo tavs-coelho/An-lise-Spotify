@@ -84,7 +84,49 @@ This project implements a **complete end-to-end machine learning pipeline** for 
 
 ---
 
+## 🎬 Demo & Screenshots
+
+### 📸 Visual Overview
+
+<div align="center">
+
+#### 🖥️ Interactive Dashboard
+![Dashboard Preview](assets/screenshots/dashboard_preview.png)
+*Streamlit dashboard with real-time predictions, model comparison, and interactive visualizations*
+
+#### 🚀 REST API Documentation
+![API Preview](assets/screenshots/api_preview.png)
+*FastAPI OpenAPI interface with interactive endpoint testing*
+
+#### 🏗️ System Architecture
+![Architecture Diagram](assets/screenshots/architecture.png)
+*Production-ready architecture with multiple interfaces and Docker deployment*
+
+#### 📊 Model Results & Insights
+![Results Summary](assets/screenshots/results_summary.png)
+*Comprehensive performance comparison and key findings*
+
+#### 🔍 Feature Analysis
+![Feature Analysis](assets/screenshots/feature_analysis.png)
+*Feature importance, correlations, and relationships*
+
+</div>
+
+### 🎥 Demo Video
+
+📹 **[Watch the 5-minute demo video](assets/demo/DEMO_GUIDE.md)** showing all features in action:
+- FastAPI endpoints and predictions
+- Streamlit interactive dashboard
+- Docker deployment
+- Python library usage
+
+For instructions on creating your own demo video, see [Demo Guide](assets/demo/DEMO_GUIDE.md).
+
+---
+
 ## 🏗️ Architecture
+
+<div align="center">
 
 ```
 ┌─────────────────┐         ┌──────────────────┐
@@ -105,6 +147,8 @@ This project implements a **complete end-to-end machine learning pipeline** for 
             │  (FastAPI)   │  │  (Streamlit) │  │  Notebooks   │
             └──────────────┘  └──────────────┘  └──────────────┘
 ```
+
+</div>
 
 ---
 
