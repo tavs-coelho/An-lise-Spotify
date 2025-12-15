@@ -12,7 +12,7 @@
 
 **Advanced Machine Learning Analysis of Music Popularity on Spotify**
 
-[📊 Demo Dashboard](https://github.com/tavs-coelho/An-lise-Spotify) • [📖 Documentation](docs/) • [🔬 Research Paper](relatorio_tecnico.md) • [🚀 Quick Start](#-quick-start)
+[🎓 Presentation](apresentacao.html) • [📖 Documentation](docs/) • [🔬 Research Paper](docs/relatorio_tecnico.md) • [🚀 Quick Start](#-quick-start)
 
 </div>
 
@@ -84,7 +84,7 @@ This project implements a **complete end-to-end machine learning pipeline** for 
 
 ---
 
-## 🎬 Demo & Screenshots
+## 🎬 Screenshots & Presentation
 
 ### 📸 Visual Overview
 
@@ -112,15 +112,15 @@ This project implements a **complete end-to-end machine learning pipeline** for 
 
 </div>
 
-### 🎥 Demo Video
+### 🎓 Academic Presentation
 
-📹 **[Watch the 5-minute demo video](assets/demo/DEMO_GUIDE.md)** showing all features in action:
-- FastAPI endpoints and predictions
-- Streamlit interactive dashboard
-- Docker deployment
-- Python library usage
+📊 **[View the interactive presentation](apresentacao.html)** - Professional slides covering:
+- Project overview and methodology
+- Technical architecture and implementation
+- Machine learning results and insights
+- Production deployment and features
 
-For instructions on creating your own demo video, see [Demo Guide](assets/demo/DEMO_GUIDE.md).
+Open `apresentacao.html` in your browser for a full-screen, navigable presentation built with Reveal.js.
 
 ---
 
