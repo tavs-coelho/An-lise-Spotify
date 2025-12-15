@@ -199,18 +199,18 @@ async def predict_popularity(features: TrackFeatures):
         raise HTTPException(status_code=500, detail=f"Erro de predição: {str(e)}")
 
 
-@app.post("/predict/batch", tags=["Prediction"])
+@app.post("/predict/batch", tags=["Predição"])
 async def predict_batch(tracks: List[TrackFeatures]):
     """
-    Predict popularity for multiple tracks at once.
+    Predizer popularidade para múltiplas faixas de uma vez.
     
-    This endpoint accepts a list of track features and returns predictions
-    for all tracks in a single request.
+    Este endpoint aceita uma lista de características de faixas e retorna predições
+    para todas as faixas em uma única requisição.
     """
     if len(tracks) > 100:
         raise HTTPException(
             status_code=400,
-            detail="Maximum 100 tracks per batch request"
+            detail="Máximo de 100 faixas por requisição em lote"
         )
     
     predictions = []

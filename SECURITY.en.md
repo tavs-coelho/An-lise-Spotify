@@ -1,72 +1,72 @@
-# Política de Segurança
+# Security Policy
 
-## Versões Suportadas
+## Supported Versions
 
-Lançamos patches para vulnerabilidades de segurança. Versões atualmente suportadas:
+We release patches for security vulnerabilities. Currently supported versions:
 
-| Versão  | Suportada          |
+| Version | Supported          |
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
 | < 1.0   | :x:                |
 
-## Reportando uma Vulnerabilidade
+## Reporting a Vulnerability
 
-Levamos a segurança do nosso projeto a sério. Se você descobrir uma vulnerabilidade de segurança, por favor siga estes passos:
+We take the security of our project seriously. If you discover a security vulnerability, please follow these steps:
 
-### 1. Não Divulgue Publicamente
+### 1. Do Not Publicly Disclose
 
-Por favor, não divulgue publicamente a vulnerabilidade até que tenhamos tido a chance de resolvê-la.
+Please do not publicly disclose the vulnerability until we have had a chance to address it.
 
-### 2. Entre em Contato
+### 2. Contact Us
 
-Reporte vulnerabilidades de segurança por:
-- Abrir um GitHub Security Advisory
-- Enviar um e-mail aos mantenedores através do GitHub
+Report security vulnerabilities by:
+- Opening a GitHub Security Advisory
+- Sending an email to the maintainers through GitHub
 
-### 3. Forneça Detalhes
+### 3. Provide Details
 
-Inclua as seguintes informações:
-- Descrição da vulnerabilidade
-- Passos para reproduzir
-- Impacto potencial
-- Correção sugerida (se houver)
+Include the following information:
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
 
-### 4. Cronograma de Resposta
+### 4. Response Timeline
 
-- **Resposta Inicial:** Dentro de 48 horas
-- **Atualização de Status:** Dentro de 7 dias
-- **Cronograma de Correção:** Depende da severidade
-  - Crítica: Dentro de 7 dias
-  - Alta: Dentro de 14 dias
-  - Média: Dentro de 30 dias
-  - Baixa: Melhor esforço
+- **Initial Response:** Within 48 hours
+- **Status Update:** Within 7 days
+- **Fix Timeline:** Depends on severity
+  - Critical: Within 7 days
+  - High: Within 14 days
+  - Medium: Within 30 days
+  - Low: Best effort
 
-## Melhores Práticas de Segurança
+## Security Best Practices
 
-Ao usar este projeto:
+When using this project:
 
-1. **Mantenha Dependências Atualizadas:** Atualize regularmente todas as dependências
-2. **Use Ambientes Virtuais:** Isole as dependências do projeto
-3. **Revise o Código:** Sempre revise o código antes de executar
-4. **Segurança da API:** Use HTTPS em produção, implemente rate limiting
-5. **Variáveis de Ambiente:** Nunca commite secrets ou chaves de API
-6. **Validação de Entrada:** Sempre valide entradas de usuário
-7. **Segurança Docker:** Use tags de versão específicas, não `latest`
+1. **Keep Dependencies Updated:** Regularly update all dependencies
+2. **Use Virtual Environments:** Isolate project dependencies
+3. **Review Code:** Always review code before running
+4. **API Security:** Use HTTPS in production, implement rate limiting
+5. **Environment Variables:** Never commit secrets or API keys
+6. **Input Validation:** Always validate user inputs
+7. **Docker Security:** Use specific version tags, not `latest`
 
-## Funcionalidades de Segurança
+## Security Features
 
-Este projeto inclui:
+This project includes:
 
-- ✅ Scan de segurança com Bandit
-- ✅ Verificação de segurança de dependências com Safety
-- ✅ Verificações de qualidade de código com flake8
-- ✅ Verificação de tipos com mypy
-- ✅ Verificações automáticas de segurança CI/CD
-- ✅ Permissões mínimas de GITHUB_TOKEN
-- ✅ Validação de entrada com Pydantic
+- ✅ Security scanning with Bandit
+- ✅ Dependency security checks with Safety
+- ✅ Code quality checks with flake8
+- ✅ Type checking with mypy
+- ✅ Automated CI/CD security checks
+- ✅ Minimal GITHUB_TOKEN permissions
+- ✅ Input validation with Pydantic
 
-## Divulgação Responsável
+## Responsible Disclosure
 
-Apreciamos divulgação responsável e reconheceremos contribuidores que reportarem vulnerabilidades, a menos que prefiram permanecer anônimos.
+We appreciate responsible disclosure and will acknowledge contributors who report vulnerabilities, unless they prefer to remain anonymous.
 
-Obrigado por ajudar a manter este projeto seguro!
+Thank you for helping keep this project secure!
