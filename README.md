@@ -36,6 +36,8 @@ An-lise-Spotify/
 │   │   └── loader.py              # Carregamento e preparação de dados
 │   ├── models/                    # Módulos de modelagem ML
 │   │   └── predictor.py          # Treinamento e predição
+│   ├── visualization/             # Módulos de visualização
+│   │   └── plots.py              # Gráficos e análises visuais
 │   ├── api/                       # API REST (FastAPI)
 │   │   └── app.py                # Endpoints da API
 │   ├── dashboard/                 # Dashboard interativo
@@ -45,6 +47,13 @@ An-lise-Spotify/
 ├── tests/                         # Testes automatizados
 │   ├── test_data_loader.py       # Testes de carregamento de dados
 │   └── test_predictor.py         # Testes de modelos
+├── docs/                          # Documentação completa
+│   ├── QUICKSTART.md             # Guia de início rápido
+│   ├── USAGE.md                  # Guia de uso detalhado
+│   ├── API.md                    # Documentação da API
+│   ├── ARCHITECTURE.md           # Arquitetura do sistema
+│   ├── PRESENTATION.md           # Slides da apresentação
+│   └── references.bib            # Referências em BibTeX
 ├── data/                          # Dados brutos e processados
 │   ├── raw/                      # Dados originais
 │   └── processed/                # Dados preprocessados
@@ -52,18 +61,23 @@ An-lise-Spotify/
 ├── logs/                          # Logs da aplicação
 ├── .github/workflows/            # Pipelines CI/CD
 │   └── ci.yml                   # Workflow de integração contínua
-├── 1_entendimento_negocio.md     # Contexto e objetivos
+├── 1_entendimento_negocio.md     # Contexto e objetivos (legacy)
 ├── analise_completa_final.ipynb  # Notebook completo de análise
-├── relatorio_tecnico.md          # Relatório técnico detalhado
+├── relatorio_tecnico.md          # Relatório técnico detalhado (legacy)
+├── *.py (root)                   # Scripts Python originais (legacy)
 ├── config.yaml                   # Configurações do projeto
 ├── requirements.txt              # Dependências Python
 ├── Dockerfile                    # Container Docker
 ├── docker-compose.yml            # Orquestração de serviços
+├── setup.sh                      # Script de instalação automática
 ├── main.py                       # Script principal
+├── CHANGELOG.md                  # Histórico de mudanças
 ├── LICENSE                       # Licença MIT
 ├── CONTRIBUTING.md               # Guia de contribuição
 └── README.md                     # Este arquivo
 ```
+
+**Nota sobre scripts legacy:** Os arquivos Python na raiz (`import_libraries.py`, `train_*.py`, etc.) são scripts originais mantidos para referência. O código de produção está organizado no diretório `src/`.
 
 ---
 
@@ -404,6 +418,7 @@ Repositório: [An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
 
 ## 📑 Documentação Adicional
 
+- 🚀 [**Guia de Início Rápido**](docs/QUICKSTART.md) - Comece em minutos!
 - 📖 [Guia de Uso Completo](docs/USAGE.md)
 - 🌐 [Documentação da API](docs/API.md)
 - 🏗️ [Arquitetura do Sistema](docs/ARCHITECTURE.md)

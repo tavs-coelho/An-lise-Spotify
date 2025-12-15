@@ -1,3 +1,13 @@
+"""
+Data Exploration Script - Initial Data Loading and Statistics
+
+This script demonstrates basic data loading and exploration using pandas.
+For production use, see the structured implementation in src/data/loader.py
+
+Author: Geyson de Araujo
+Date: December 2025
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
