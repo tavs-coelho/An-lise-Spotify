@@ -1,44 +1,44 @@
-# Data Directory
+# Diretório de Dados
 
-This directory contains the datasets used in the Spotify Music Popularity Analysis project.
+Este diretório contém os datasets usados no projeto de Análise de Popularidade de Músicas no Spotify.
 
 ## Dataset
 
-### Spotify Songs Dataset
+### Dataset Spotify Songs
 
-The main dataset used in this project is the **Spotify Songs** dataset, which contains audio features for thousands of tracks.
+O principal dataset usado neste projeto é o dataset **Spotify Songs**, que contém características de áudio para milhares de faixas.
 
-#### Download Instructions
+#### Instruções de Download
 
-Due to size limitations, the dataset is not included in this repository. Please download it using one of the following methods:
+Devido a limitações de tamanho, o dataset não está incluído neste repositório. Por favor, baixe-o usando um dos seguintes métodos:
 
-##### Option 1: Kaggle API (Recommended)
+##### Opção 1: API do Kaggle (Recomendado)
 
 ```bash
-# Install Kaggle API
+# Instale a API do Kaggle
 pip install kaggle
 
-# Configure Kaggle credentials (place kaggle.json in ~/.kaggle/)
-# Download the dataset
+# Configure credenciais do Kaggle (coloque kaggle.json em ~/.kaggle/)
+# Baixe o dataset
 kaggle datasets download -d zaheenhamidani/ultimate-spotify-tracks-db
 
-# Unzip to data directory
+# Descompacte no diretório data
 unzip ultimate-spotify-tracks-db.zip -d data/
 ```
 
-##### Option 2: Manual Download
+##### Opção 2: Download Manual
 
-1. Visit [Kaggle - Ultimate Spotify Tracks DB](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db)
-2. Download the CSV file
-3. Place it in this directory as `spotify_songs.csv`
+1. Visite [Kaggle - Ultimate Spotify Tracks DB](https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db)
+2. Baixe o arquivo CSV
+3. Coloque-o neste diretório como `spotify_songs.csv`
 
-#### Dataset Information
+#### Informações do Dataset
 
-- **Rows:** ~113,999 tracks
-- **Columns:** 23 features
-- **Size:** ~15 MB
-- **Format:** CSV
+- **Linhas:** ~113.999 faixas
+- **Colunas:** 23 características
+- **Tamanho:** ~15 MB
+- **Formato:** CSV
 
-## Sample Data
+## Dados de Exemplo
 
-For testing purposes, the application can generate sample data if the main dataset is not available.
+Para fins de teste, a aplicação pode gerar dados de exemplo se o dataset principal não estiver disponível.

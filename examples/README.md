@@ -1,1 +1,1 @@
-# Examples directory
+# Diretório de Exemplos

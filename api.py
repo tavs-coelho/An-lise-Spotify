@@ -1,6 +1,6 @@
-"""FastAPI REST API for Spotify Popularity Prediction.
+"""API REST FastAPI para Predição de Popularidade no Spotify.
 
-Run with: uvicorn api:app --reload
+Execute com: uvicorn api:app --reload
 """
 
 from fastapi import FastAPI, HTTPException
@@ -11,21 +11,21 @@ import numpy as np
 from pathlib import Path
 import sys
 
-# Add src to path
+# Adiciona src ao path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
 from spotify_analysis.config import config
 
-# Create FastAPI app
+# Cria aplicação FastAPI
 app = FastAPI(
-    title="Spotify Popularity Prediction API",
-    description="REST API for predicting music popularity based on audio features",
+    title="API de Predição de Popularidade no Spotify",
+    description="API REST para predizer popularidade de músicas baseado em características de áudio",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )
 
-# Add CORS middleware
+# Adiciona middleware CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -35,22 +35,22 @@ app.add_middleware(
 )
 
 
-# Pydantic models for request/response
+# Modelos Pydantic para requisição/resposta
 class TrackFeatures(BaseModel):
-    """Input features for a track."""
-    danceability: float = Field(..., ge=0, le=1, description="Danceability (0-1)")
-    energy: float = Field(..., ge=0, le=1, description="Energy (0-1)")
-    loudness: float = Field(..., ge=-60, le=0, description="Loudness in dB (-60 to 0)")
-    speechiness: float = Field(..., ge=0, le=1, description="Speechiness (0-1)")
-    acousticness: float = Field(..., ge=0, le=1, description="Acousticness (0-1)")
-    instrumentalness: float = Field(..., ge=0, le=1, description="Instrumentalness (0-1)")
-    liveness: float = Field(..., ge=0, le=1, description="Liveness (0-1)")
-    valence: float = Field(..., ge=0, le=1, description="Valence/positivity (0-1)")
-    tempo: float = Field(..., ge=0, le=300, description="Tempo in BPM")
-    duration_ms: Optional[float] = Field(200000, description="Duration in milliseconds")
-    key: Optional[int] = Field(0, ge=0, le=11, description="Musical key (0-11)")
-    mode: Optional[int] = Field(1, ge=0, le=1, description="Mode (0=minor, 1=major)")
-    time_signature: Optional[int] = Field(4, ge=1, le=7, description="Time signature")
+    """Características de entrada para uma faixa."""
+    danceability: float = Field(..., ge=0, le=1, description="Dançabilidade (0-1)")
+    energy: float = Field(..., ge=0, le=1, description="Energia (0-1)")
+    loudness: float = Field(..., ge=-60, le=0, description="Volume em dB (-60 a 0)")
+    speechiness: float = Field(..., ge=0, le=1, description="Presença de fala (0-1)")
+    acousticness: float = Field(..., ge=0, le=1, description="Acústico (0-1)")
+    instrumentalness: float = Field(..., ge=0, le=1, description="Instrumental (0-1)")
+    liveness: float = Field(..., ge=0, le=1, description="Ao vivo (0-1)")
+    valence: float = Field(..., ge=0, le=1, description="Valência/positividade (0-1)")
+    tempo: float = Field(..., ge=0, le=300, description="Tempo em BPM")
+    duration_ms: Optional[float] = Field(200000, description="Duração em milissegundos")
+    key: Optional[int] = Field(0, ge=0, le=11, description="Tom musical (0-11)")
+    mode: Optional[int] = Field(1, ge=0, le=1, description="Modo (0=menor, 1=maior)")
+    time_signature: Optional[int] = Field(4, ge=1, le=7, description="Fórmula de compasso")
     
     class Config:
         json_schema_extra = {
@@ -73,53 +73,53 @@ class TrackFeatures(BaseModel):
 
 
 class PredictionResponse(BaseModel):
-    """Response model for prediction."""
-    predicted_popularity: float = Field(..., description="Predicted popularity score (0-100)")
-    category: str = Field(..., description="Popularity category (Low/Medium/High)")
-    confidence: float = Field(..., description="Prediction confidence (0-1)")
-    top_features: Dict[str, float] = Field(..., description="Top contributing features")
+    """Modelo de resposta para predição."""
+    predicted_popularity: float = Field(..., description="Pontuação de popularidade predita (0-100)")
+    category: str = Field(..., description="Categoria de popularidade (Baixa/Média/Alta)")
+    confidence: float = Field(..., description="Confiança da predição (0-1)")
+    top_features: Dict[str, float] = Field(..., description="Principais características contribuintes")
 
 
 class HealthResponse(BaseModel):
-    """Health check response."""
+    """Resposta de verificação de saúde."""
     status: str
     version: str
     model_loaded: bool
 
 
 class ModelInfo(BaseModel):
-    """Model information response."""
+    """Resposta de informações do modelo."""
     model_name: str
     model_type: str
     features: List[str]
     metrics: Dict[str, float]
 
 
-# Routes
-@app.get("/", tags=["General"])
+# Rotas
+@app.get("/", tags=["Geral"])
 async def root():
-    """Root endpoint."""
+    """Endpoint raiz."""
     return {
-        "message": "Spotify Popularity Prediction API",
+        "message": "API de Predição de Popularidade no Spotify",
         "version": "1.0.0",
         "docs": "/docs",
         "health": "/health"
     }
 
 
-@app.get("/health", response_model=HealthResponse, tags=["General"])
+@app.get("/health", response_model=HealthResponse, tags=["Geral"])
 async def health_check():
-    """Health check endpoint."""
+    """Endpoint de verificação de saúde."""
     return {
         "status": "healthy",
         "version": "1.0.0",
-        "model_loaded": True  # In production, check actual model
+        "model_loaded": True  # Em produção, verificar modelo real
     }
 
 
-@app.get("/model/info", response_model=ModelInfo, tags=["Model"])
+@app.get("/model/info", response_model=ModelInfo, tags=["Modelo"])
 async def get_model_info():
-    """Get information about the loaded model."""
+    """Obter informações sobre o modelo carregado."""
     return {
         "model_name": "XGBoost Regressor",
         "model_type": "Gradient Boosting",
@@ -132,19 +132,19 @@ async def get_model_info():
     }
 
 
-@app.post("/predict", response_model=PredictionResponse, tags=["Prediction"])
+@app.post("/predict", response_model=PredictionResponse, tags=["Predição"])
 async def predict_popularity(features: TrackFeatures):
     """
-    Predict the popularity of a track based on its audio features.
+    Predizer a popularidade de uma faixa baseado em suas características de áudio.
     
-    This endpoint takes musical features of a track and returns a predicted 
-    popularity score (0-100) along with additional insights.
+    Este endpoint recebe características musicais de uma faixa e retorna uma pontuação
+    de popularidade predita (0-100) junto com insights adicionais.
     """
     try:
-        # In production, use actual trained model
-        # For demo, use weighted sum approximation
+        # Em produção, usar modelo treinado real
+        # Para demo, usar aproximação de soma ponderada
         
-        # Calculate weighted prediction
+        # Calcular predição ponderada
         predicted_value = (
             features.loudness * 0.285 +
             features.energy * 0.198 * 100 +
@@ -157,22 +157,22 @@ async def predict_popularity(features: TrackFeatures):
             features.liveness * 0.015 * 100
         )
         
-        # Normalize to 0-100 range
+        # Normalizar para intervalo 0-100
         predicted_popularity = max(0, min(100, predicted_value))
         
-        # Determine category
+        # Determinar categoria
         if predicted_popularity >= 70:
-            category = "High"
+            category = "Alta"
         elif predicted_popularity >= 40:
-            category = "Medium"
+            category = "Média"
         else:
-            category = "Low"
+            category = "Baixa"
         
-        # Calculate confidence (simplified for demo)
+        # Calcular confiança (simplificado para demo)
         confidence = 0.75 + np.random.uniform(-0.1, 0.1)
         confidence = max(0, min(1, confidence))
         
-        # Top contributing features
+        # Principais características contribuintes
         feature_contributions = {
             "loudness": abs(features.loudness * 0.285),
             "energy": features.energy * 0.198,
@@ -181,7 +181,7 @@ async def predict_popularity(features: TrackFeatures):
             "acousticness": features.acousticness * 0.089
         }
         
-        # Sort and get top 3
+        # Ordenar e pegar top 3
         top_features = dict(sorted(
             feature_contributions.items(),
             key=lambda x: x[1],
@@ -196,21 +196,21 @@ async def predict_popularity(features: TrackFeatures):
         }
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Erro de predição: {str(e)}")
 
 
-@app.post("/predict/batch", tags=["Prediction"])
+@app.post("/predict/batch", tags=["Predição"])
 async def predict_batch(tracks: List[TrackFeatures]):
     """
-    Predict popularity for multiple tracks at once.
+    Predizer popularidade para múltiplas faixas de uma vez.
     
-    This endpoint accepts a list of track features and returns predictions
-    for all tracks in a single request.
+    Este endpoint aceita uma lista de características de faixas e retorna predições
+    para todas as faixas em uma única requisição.
     """
     if len(tracks) > 100:
         raise HTTPException(
             status_code=400,
-            detail="Maximum 100 tracks per batch request"
+            detail="Máximo de 100 faixas por requisição em lote"
         )
     
     predictions = []

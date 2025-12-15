@@ -1,131 +1,131 @@
-# Assets Directory
+# Diretório de Assets
 
-This directory contains visual assets for the project documentation.
+Este diretório contém assets visuais para a documentação do projeto.
 
-## 📁 Directory Structure
+## 📁 Estrutura de Diretórios
 
 ```
 assets/
-├── screenshots/          # High-resolution screenshots of the application
-│   ├── dashboard_preview.png      # Streamlit dashboard interface
-│   ├── api_preview.png            # FastAPI documentation
-│   ├── architecture.png           # System architecture diagram
-│   ├── results_summary.png        # Model performance and insights
-│   └── feature_analysis.png       # Feature importance and correlations
+├── screenshots/          # Screenshots em alta resolução da aplicação
+│   ├── dashboard_preview.png      # Interface do dashboard Streamlit
+│   ├── api_preview.png            # Documentação FastAPI
+│   ├── architecture.png           # Diagrama de arquitetura do sistema
+│   ├── results_summary.png        # Desempenho do modelo e insights
+│   └── feature_analysis.png       # Importância de features e correlações
 │
-├── demo/                 # Demo video resources and guides
-│   └── DEMO_GUIDE.md             # Instructions for creating demo videos
+├── demo/                 # Recursos de vídeo demo e guias
+│   └── DEMO_GUIDE.md             # Instruções para criar vídeos demo
 │
-└── generate_screenshots.py        # Script to regenerate screenshots
+└── generate_screenshots.py        # Script para regenerar screenshots
 
 ```
 
 ## 🎨 Screenshots
 
-All screenshots are generated programmatically using matplotlib and seaborn to ensure consistency and reproducibility.
+Todos os screenshots são gerados programaticamente usando matplotlib e seaborn para garantir consistência e reprodutibilidade.
 
-### Generation
+### Geração
 
-To regenerate all screenshots:
+Para regenerar todos os screenshots:
 
 ```bash
 python assets/generate_screenshots.py
 ```
 
-Requirements:
+Requisitos:
 - matplotlib
 - seaborn
 - pandas
 - numpy
 
-### Specifications
+### Especificações
 
-- **Format:** PNG
-- **Resolution:** 150 DPI
-- **Color:** Full color with white background
-- **Size:** Optimized for web and print
+- **Formato:** PNG
+- **Resolução:** 150 DPI
+- **Cor:** Cor completa com fundo branco
+- **Tamanho:** Otimizado para web e impressão
 
-## 📸 Screenshot Descriptions
+## 📸 Descrições de Screenshots
 
 ### 1. dashboard_preview.png
-**Dimensions:** ~1600x1200px  
-**Content:** 
-- Project metrics overview
-- Feature importance chart
-- Model comparison bars
-- Popularity distribution histogram
+**Dimensões:** ~1600x1200px  
+**Conteúdo:** 
+- Visão geral de métricas do projeto
+- Gráfico de importância de features
+- Barras de comparação de modelos
+- Histograma de distribuição de popularidade
 
 ### 2. api_preview.png
-**Dimensions:** ~1400x1000px  
-**Content:**
-- FastAPI endpoint list with HTTP methods
-- Example request/response format
-- Interactive documentation link
+**Dimensões:** ~1400x1000px  
+**Conteúdo:**
+- Lista de endpoints FastAPI com métodos HTTP
+- Formato de exemplo de requisição/resposta
+- Link de documentação interativa
 
 ### 3. architecture.png
-**Dimensions:** ~1400x1000px  
-**Content:**
-- System architecture layers
-- Component interactions
-- Data flow visualization
+**Dimensões:** ~1400x1000px  
+**Conteúdo:**
+- Camadas de arquitetura do sistema
+- Interações de componentes
+- Visualização de fluxo de dados
 
 ### 4. results_summary.png
-**Dimensions:** ~1400x1000px  
-**Content:**
-- Model MAE and R² comparisons
-- Feature importance distribution
-- Key insights summary
+**Dimensões:** ~1400x1000px  
+**Conteúdo:**
+- Comparações de MAE e R² dos modelos
+- Distribuição de importância de features
+- Resumo de insights principais
 
 ### 5. feature_analysis.png
-**Dimensions:** ~1400x1000px  
-**Content:**
-- Scatter plots of feature relationships
-- Correlation heatmap
-- Distribution comparisons
+**Dimensões:** ~1400x1000px  
+**Conteúdo:**
+- Gráficos de dispersão de relacionamentos de features
+- Mapa de calor de correlação
+- Comparações de distribuição
 
-## 🎥 Demo Resources
+## 🎥 Recursos de Demo
 
-See `demo/DEMO_GUIDE.md` for comprehensive instructions on:
-- Creating demo videos
-- Recording screen captures
-- Making animated GIFs
-- Publishing demos
+Veja `demo/DEMO_GUIDE.md` para instruções abrangentes sobre:
+- Criar vídeos demo
+- Gravar capturas de tela
+- Fazer GIFs animados
+- Publicar demos
 
-## 📝 Usage Guidelines
+## 📝 Diretrizes de Uso
 
-### In Documentation
+### Na Documentação
 ```markdown
-![Dashboard Preview](assets/screenshots/dashboard_preview.png)
+![Prévia do Dashboard](assets/screenshots/dashboard_preview.png)
 ```
 
-### In Presentations
-- All images are high-resolution and suitable for presentations
-- Use with proper attribution to the project
+### Em Apresentações
+- Todas as imagens são em alta resolução e adequadas para apresentações
+- Use com atribuição adequada ao projeto
 
-### In Academic Reports
-- Screenshots demonstrate the practical implementation
-- Can be included in methodology and results sections
+### Em Relatórios Acadêmicos
+- Screenshots demonstram a implementação prática
+- Podem ser incluídos nas seções de metodologia e resultados
 
-## 🔄 Updating Assets
+## 🔄 Atualizando Assets
 
-When updating the project:
+Ao atualizar o projeto:
 
-1. **Visual Changes:** If the UI changes, regenerate screenshots
-2. **New Features:** Add new screenshots showcasing them
-3. **Consistency:** Keep visual style consistent across all assets
-4. **Documentation:** Update this README with new asset descriptions
+1. **Mudanças Visuais:** Se a UI mudar, regenere os screenshots
+2. **Novas Funcionalidades:** Adicione novos screenshots mostrando-as
+3. **Consistência:** Mantenha estilo visual consistente em todos os assets
+4. **Documentação:** Atualize este README com novas descrições de assets
 
-## 📄 License
+## 📄 Licença
 
-All visual assets in this directory are part of the Spotify Analysis project and are licensed under the MIT License, consistent with the project license.
+Todos os assets visuais neste diretório são parte do projeto de Análise do Spotify e estão licenciados sob a Licença MIT, consistente com a licença do projeto.
 
-## 🙏 Credits
+## 🙏 Créditos
 
-Screenshots generated using:
-- **matplotlib** - Plotting library
-- **seaborn** - Statistical visualization
-- **Python** - Automation and scripting
+Screenshots gerados usando:
+- **matplotlib** - Biblioteca de plotagem
+- **seaborn** - Visualização estatística
+- **Python** - Automação e scripting
 
 ---
 
-*Last updated: December 2025*
+*Última atualização: Dezembro 2025*
