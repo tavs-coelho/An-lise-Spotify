@@ -54,6 +54,3 @@ sphinx-rtd-theme==2.0.0
 # Security
 bandit==1.7.5
 safety==2.3.5
-
-# Data validation
-pydantic==2.5.3
