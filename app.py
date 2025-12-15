@@ -1,6 +1,6 @@
-"""Streamlit Dashboard for Spotify Music Popularity Analysis.
+"""Dashboard Streamlit para Análise de Popularidade de Músicas no Spotify.
 
-Run with: streamlit run app.py
+Execute com: streamlit run app.py
 """
 
 import streamlit as st
@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 from pathlib import Path
 import sys
 
-# Add src to path
+# Adiciona src ao path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
 from spotify_analysis.config import config
@@ -24,14 +24,14 @@ from spotify_analysis.visualization import (
     plot_predictions_vs_actual
 )
 
-# Page configuration
+# Configuração da página
 st.set_page_config(
     page_title=config.streamlit_config['page_title'],
     page_icon=config.streamlit_config['page_icon'],
     layout=config.streamlit_config['layout']
 )
 
-# Custom CSS
+# CSS personalizado
 st.markdown("""
 <style>
     .main-header {
@@ -56,31 +56,31 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Title
-st.markdown('<h1 class="main-header">🎵 Spotify Music Popularity Analysis</h1>', unsafe_allow_html=True)
-st.markdown("### Interactive Dashboard for Machine Learning Analysis")
+# Título
+st.markdown('<h1 class="main-header">🎵 Análise de Popularidade de Músicas no Spotify</h1>', unsafe_allow_html=True)
+st.markdown("### Dashboard Interativo para Análise de Machine Learning")
 
-# Sidebar
+# Barra lateral
 st.sidebar.image("https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png", width=200)
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", [
-    "📊 Overview",
-    "🔍 Data Explorer",
-    "🤖 Model Performance",
-    "📈 Feature Analysis",
-    "🎯 Make Predictions"
+st.sidebar.title("Navegação")
+page = st.sidebar.radio("Ir para", [
+    "📊 Visão Geral",
+    "🔍 Explorador de Dados",
+    "🤖 Desempenho do Modelo",
+    "📈 Análise de Features",
+    "🎯 Fazer Predições"
 ])
 
 st.sidebar.markdown("---")
 st.sidebar.info(
-    "**About:** This dashboard provides an interactive interface to explore "
-    "the Spotify music popularity prediction model."
+    "**Sobre:** Este dashboard fornece uma interface interativa para explorar "
+    "o modelo de predição de popularidade de músicas no Spotify."
 )
 
-# Sample data for demo (in production, load real data)
+# Dados de exemplo para demo (em produção, carregar dados reais)
 @st.cache_data
 def load_sample_data():
-    """Load sample data for demonstration."""
+    """Carregar dados de exemplo para demonstração."""
     np.random.seed(42)
     n_samples = 1000
     
@@ -101,9 +101,9 @@ def load_sample_data():
 
 df = load_sample_data()
 
-# PAGE: Overview
-if page == "📊 Overview":
-    st.markdown('<h2 class="sub-header">Project Overview</h2>', unsafe_allow_html=True)
+# PÁGINA: Visão Geral
+if page == "📊 Visão Geral":
+    st.markdown('<h2 class="sub-header">Visão Geral do Projeto</h2>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     
