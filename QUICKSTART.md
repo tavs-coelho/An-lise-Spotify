@@ -1,67 +1,67 @@
-# Quick Start Guide
+# Guia de Início Rápido
 
-This guide will help you get started with the Spotify Music Popularity Analysis project in 5 minutes.
+Este guia irá ajudá-lo a começar com o projeto de Análise de Popularidade de Músicas no Spotify em 5 minutos.
 
-## Prerequisites
+## Pré-requisitos
 
-- Python 3.8 or higher
-- pip (Python package manager)
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
 - Git
 
-## Option 1: Quick Demo with Docker (Fastest) 🐳
+## Opção 1: Demo Rápida com Docker (Mais Rápida) 🐳
 
 ```bash
-# 1. Clone the repository
+# 1. Clone o repositório
 git clone https://github.com/tavs-coelho/An-lise-Spotify.git
 cd An-lise-Spotify
 
-# 2. Start with Docker Compose
+# 2. Inicie com Docker Compose
 docker-compose up -d
 
-# 3. Access the services
+# 3. Acesse os serviços
 # - API: http://localhost:8000/docs
 # - Dashboard: http://localhost:8501
 ```
 
-That's it! 🎉
+Pronto! 🎉
 
-## Option 2: Local Installation (Recommended for Development) 💻
+## Opção 2: Instalação Local (Recomendada para Desenvolvimento) 💻
 
-### Step 1: Clone and Setup
+### Passo 1: Clone e Configure
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone https://github.com/tavs-coelho/An-lise-Spotify.git
 cd An-lise-Spotify
 
-# Create virtual environment
+# Crie ambiente virtual
 python -m venv venv
 
-# Activate virtual environment
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Ative o ambiente virtual
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 
-# Install dependencies
+# Instale dependências
 pip install -r requirements.txt
 pip install -e .
 ```
 
-### Step 2: Choose Your Interface
+### Passo 2: Escolha Sua Interface
 
-#### A. Interactive Dashboard (Easiest)
+#### A. Dashboard Interativo (Mais Fácil)
 
 ```bash
 streamlit run app.py
 ```
 
-Then open your browser to `http://localhost:8501`
+Depois abra seu navegador em `http://localhost:8501`
 
-#### B. REST API
+#### B. API REST
 
 ```bash
 uvicorn api:app --reload
 ```
 
-API docs available at `http://localhost:8000/docs`
+Documentação da API disponível em `http://localhost:8000/docs`
 
 #### C. Jupyter Notebook
 
@@ -69,36 +69,36 @@ API docs available at `http://localhost:8000/docs`
 jupyter notebook notebooks/analise_completa_final.ipynb
 ```
 
-#### D. Python Code
+#### D. Código Python
 
 ```python
 from spotify_analysis.models import ModelTrainer
 from spotify_analysis.data import DataLoader, DataPreprocessor
 import numpy as np
 
-# Create sample data
+# Crie dados de exemplo
 X_train = np.random.randn(100, 10)
 y_train = np.random.randint(0, 100, 100)
 
-# Train model
+# Treine o modelo
 trainer = ModelTrainer('xgboost')
 trainer.fit(X_train, y_train)
 
-# Make predictions
+# Faça predições
 X_test = np.random.randn(20, 10)
 predictions = trainer.predict(X_test)
 print(predictions)
 ```
 
-## Option 3: Try the API 🚀
+## Opção 3: Teste a API 🚀
 
-### Using cURL
+### Usando cURL
 
 ```bash
-# Health check
+# Verificação de saúde
 curl http://localhost:8000/health
 
-# Make a prediction
+# Faça uma predição
 curl -X POST "http://localhost:8000/predict" \
   -H "Content-Type: application/json" \
   -d '{
@@ -114,7 +114,7 @@ curl -X POST "http://localhost:8000/predict" \
   }'
 ```
 
-### Using Python requests
+### Usando Python requests
 
 ```python
 import requests
@@ -136,73 +136,73 @@ response = requests.post(url, json=data)
 print(response.json())
 ```
 
-## Next Steps 📚
+## Próximos Passos 📚
 
-1. **Explore the Dashboard:** Try different feature combinations to see how they affect popularity
-2. **Read the Documentation:** Check out the [README](README.md) and [Technical Report](docs/relatorio_tecnico.md)
-3. **Run Tests:** `pytest tests/`
-4. **Contribute:** See [CONTRIBUTING.md](CONTRIBUTING.md)
+1. **Explore o Dashboard:** Teste diferentes combinações de features para ver como elas afetam a popularidade
+2. **Leia a Documentação:** Confira o [README](README.md) e [Relatório Técnico](docs/relatorio_tecnico.md)
+3. **Execute os Testes:** `pytest tests/`
+4. **Contribua:** Veja [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Common Commands 🛠️
+## Comandos Comuns 🛠️
 
 ```bash
-# Run tests
+# Execute testes
 pytest
 
-# Format code
+# Formate código
 black src/ tests/
 
-# Lint code
+# Lint de código
 flake8 src/ tests/
 
-# Type check
+# Verificação de tipos
 mypy src/
 
-# Run all quality checks
+# Execute todas as verificações de qualidade
 make quality
 
-# Start API
+# Inicie API
 make run-api
 
-# Start dashboard
+# Inicie dashboard
 make run-dashboard
 ```
 
-## Troubleshooting 🔧
+## Solução de Problemas 🔧
 
-### Import Errors
+### Erros de Importação
 
 ```bash
-# Make sure you're in the virtual environment
+# Certifique-se de estar no ambiente virtual
 source venv/bin/activate
 
-# Reinstall the package
+# Reinstale o pacote
 pip install -e .
 ```
 
-### Port Already in Use
+### Porta Já em Uso
 
 ```bash
-# For API (change port)
+# Para API (mude a porta)
 uvicorn api:app --port 8001
 
-# For Streamlit (change port)
+# Para Streamlit (mude a porta)
 streamlit run app.py --server.port 8502
 ```
 
-### Docker Issues
+### Problemas com Docker
 
 ```bash
-# Rebuild containers
+# Reconstrua os containers
 docker-compose down
 docker-compose build --no-cache
 docker-compose up -d
 ```
 
-## Need Help? 💬
+## Precisa de Ajuda? 💬
 
-- 📖 Check the [full documentation](README.md)
-- 🐛 [Report issues](https://github.com/tavs-coelho/An-lise-Spotify/issues)
-- 💡 [Start a discussion](https://github.com/tavs-coelho/An-lise-Spotify/discussions)
+- 📖 Confira a [documentação completa](README.md)
+- 🐛 [Reporte problemas](https://github.com/tavs-coelho/An-lise-Spotify/issues)
+- 💡 [Inicie uma discussão](https://github.com/tavs-coelho/An-lise-Spotify/discussions)
 
-Happy analyzing! 🎵✨
+Boas análises! 🎵✨

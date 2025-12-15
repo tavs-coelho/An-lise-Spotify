@@ -1,58 +1,58 @@
-# Changelog
+# Histórico de Mudanças
 
-All notable changes to this project will be documented in this file.
+Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
+e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/spec/v2.0.0.html).
 
 ## [1.0.0] - 2025-12-15
 
-### Added
-- Complete professional package structure with `src/spotify_analysis/`
-- FastAPI REST API for model serving with OpenAPI documentation
-- Interactive Streamlit dashboard with real-time predictions
-- Docker and Docker Compose support for containerized deployment
-- Comprehensive CI/CD pipeline with GitHub Actions
-- Unit and integration tests with pytest
-- Code quality tools integration (black, flake8, mypy, isort, bandit)
-- Type hints on all functions
-- Comprehensive docstrings following Google style
-- Data processing module with preprocessing pipelines
-- Model training module with 6 regression algorithms
-- Visualization utilities with publication-quality plots
-- Configuration management system
-- Logging and error handling utilities
-- MIT License for open source distribution
-- Professional README with badges and documentation
-- CONTRIBUTING.md with development guidelines
-- Makefile for common development tasks
-- Requirements.txt with pinned dependencies
-- pyproject.toml for modern Python packaging
+### Adicionado
+- Estrutura de pacote profissional completa com `src/spotify_analysis/`
+- API REST FastAPI para servir modelos com documentação OpenAPI
+- Dashboard interativo Streamlit com interface de predição em tempo real
+- Suporte Docker e Docker Compose para implantação containerizada
+- Pipeline CI/CD abrangente com GitHub Actions
+- Testes unitários e de integração com pytest
+- Integração de ferramentas de qualidade de código (black, flake8, mypy, isort, bandit)
+- Type hints em todas as funções
+- Docstrings abrangentes seguindo estilo Google
+- Módulo de processamento de dados com pipelines de pré-processamento
+- Módulo de treinamento de modelos com 6 algoritmos de regressão
+- Utilitários de visualização com plots de qualidade de publicação
+- Sistema de gerenciamento de configuração
+- Utilitários de logging e tratamento de erros
+- Licença MIT para distribuição open source
+- README profissional com badges e documentação
+- CONTRIBUTING.md com diretrizes de desenvolvimento
+- Makefile para tarefas comuns de desenvolvimento
+- Requirements.txt com dependências fixadas
+- pyproject.toml para empacotamento Python moderno
 
-### Changed
-- Reorganized project structure following Python best practices
-- Moved legacy scripts to `legacy_scripts/` folder
-- Moved documentation to `docs/` folder
-- Moved notebook to `notebooks/` folder
-- Updated README with comprehensive instructions
+### Modificado
+- Reorganizada estrutura do projeto seguindo melhores práticas Python
+- Movidos scripts legados para pasta `legacy_scripts/`
+- Movida documentação para pasta `docs/`
+- Movido notebook para pasta `notebooks/`
+- Atualizado README com instruções abrangentes
 
-### Fixed
-- Import errors and module dependencies
-- Security issues identified by CodeQL
-- Code quality issues identified by linters
-- Duplicate dependencies in requirements.txt
-- Missing permissions in GitHub Actions workflow
+### Corrigido
+- Erros de importação e dependências de módulos
+- Problemas de segurança identificados pelo CodeQL
+- Problemas de qualidade de código identificados por linters
+- Dependências duplicadas em requirements.txt
+- Permissões ausentes no workflow do GitHub Actions
 
-### Security
-- Added security scanning with bandit
-- Implemented proper GITHUB_TOKEN permissions
-- Added dependency security checks with safety
+### Segurança
+- Adicionado scan de segurança com bandit
+- Implementadas permissões apropriadas de GITHUB_TOKEN
+- Adicionadas verificações de segurança de dependências com safety
 
-## [0.1.0] - Initial Release
+## [0.1.0] - Lançamento Inicial
 
-### Added
-- Basic analysis notebook
-- Simple Python scripts for data processing
-- XGBoost model training
-- Basic visualizations
-- Technical report in Portuguese
+### Adicionado
+- Notebook básico de análise
+- Scripts Python simples para processamento de dados
+- Treinamento de modelo XGBoost
+- Visualizações básicas
+- Relatório técnico em português
