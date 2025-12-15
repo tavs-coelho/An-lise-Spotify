@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎵 Spotify Music Popularity Analysis
+# 🎵 Análise de Popularidade de Músicas no Spotify
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,140 +10,141 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)](https://streamlit.io/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 
-**Advanced Machine Learning Analysis of Music Popularity on Spotify**
+**Análise Avançada de Machine Learning sobre Popularidade de Músicas no Spotify**
 
-[🎓 Presentation](apresentacao.html) • [📖 Documentation](docs/) • [🔬 Research Paper](docs/relatorio_tecnico.md) • [🚀 Quick Start](#-quick-start)
+[🎓 Apresentação](apresentacao.html) • [📖 Documentação](docs/) • [🔬 Relatório Técnico](docs/relatorio_tecnico.md) • [🚀 Início Rápido](#-início-rápido)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 📋 Índice
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Architecture](#-architecture)
-- [Quick Start](#-quick-start)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [Methodology](#-methodology)
-- [Results](#-results)
-- [Technologies](#-technologies)
-- [API Documentation](#-api-documentation)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Citation](#-citation)
-- [Contact](#-contact)
-
----
-
-## 🎯 Overview
-
-This project implements a **complete end-to-end machine learning pipeline** for predicting music popularity on Spotify using the **CRISP-DM methodology**. It combines supervised learning (Regression & Classification), unsupervised learning (Clustering), and recommendation systems to provide comprehensive insights into what makes music popular.
-
-### 🎓 Academic Context
-
-- **Course:** Data Science & Machine Learning
-- **Author:** Geyson de Araujo
-- **Date:** December 2025
-- **Institution:** Academic Research Project
-
-### 🎤 Business Problem
-
-*How can we predict music popularity based on intrinsic audio features to help artists, record labels, and streaming platforms make data-driven decisions?*
+- [Visão Geral](#-visão-geral)
+- [Funcionalidades](#-funcionalidades)
+- [Arquitetura](#-arquitetura)
+- [Início Rápido](#-início-rápido)
+- [Instalação](#-instalação)
+- [Uso](#-uso)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Metodologia](#-metodologia)
+- [Resultados](#-resultados)
+- [Tecnologias](#-tecnologias)
+- [Documentação da API](#-documentação-da-api)
+- [Contribuindo](#-contribuindo)
+- [Licença](#-licença)
+- [Citação](#-citação)
+- [Contato](#-contato)
 
 ---
 
-## ✨ Features
+## 🎯 Visão Geral
 
-### 🔬 Machine Learning Models
-- **6 Regression Models:** Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, XGBoost
-- **Classification:** Multi-class popularity categorization
-- **Clustering:** K-Means for music profile discovery
-- **Recommendation System:** Content-based filtering using cosine similarity
+Este projeto implementa um **pipeline completo de machine learning de ponta a ponta** para predizer a popularidade de músicas no Spotify usando a **metodologia CRISP-DM**. Combina aprendizado supervisionado (Regressão e Classificação), aprendizado não supervisionado (Clustering) e sistemas de recomendação para fornecer insights abrangentes sobre o que torna a música popular.
 
-### 📊 Interactive Dashboards
-- **Streamlit Dashboard:** Real-time visualization and prediction interface
-- **Plotly Visualizations:** Interactive charts and graphs
-- **Model Comparison:** Side-by-side performance metrics
+### 🎓 Contexto Acadêmico
 
-### 🚀 Production-Ready Features
-- **REST API:** FastAPI-based microservice for predictions
-- **Docker Support:** Containerized deployment with Docker Compose
-- **CI/CD Pipeline:** Automated testing and quality checks
-- **Comprehensive Testing:** Unit and integration tests with pytest
-- **Type Safety:** Full type hints with mypy validation
-- **Code Quality:** Black, isort, flake8, and bandit integration
+- **Curso:** Ciência de Dados & Machine Learning
+- **Autor:** Geyson de Araujo
+- **Data:** Dezembro 2025
+- **Instituição:** Projeto de Pesquisa Acadêmica
 
-### 📈 Advanced Analytics
-- **Feature Importance:** SHAP and tree-based importance analysis
-- **Cross-Validation:** Robust model evaluation
-- **Hyperparameter Tuning:** Optimized model configurations
-- **Model Interpretability:** Clear explanations of predictions
+### 🎤 Problema de Negócio
+
+*Como podemos prever a popularidade de músicas com base em características intrínsecas de áudio para ajudar artistas, gravadoras e plataformas de streaming a tomar decisões baseadas em dados?*
 
 ---
 
-## 🎬 Screenshots & Presentation
+## ✨ Funcionalidades
 
-### 📸 Visual Overview
+### 🔬 Modelos de Machine Learning
+- **6 Modelos de Regressão:** Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, XGBoost
+- **Classificação:** Categorização multi-classe de popularidade
+- **Clustering:** K-Means para descoberta de perfis musicais
+- **Sistema de Recomendação:** Filtragem baseada em conteúdo usando similaridade de cosseno
+
+### 📊 Dashboards Interativos
+- **Dashboard Streamlit:** Interface de visualização e predição em tempo real
+- **Visualizações Plotly:** Gráficos e plots interativos
+- **Comparação de Modelos:** Métricas de desempenho lado a lado
+
+### 🚀 Funcionalidades Prontas para Produção
+- **API REST:** Microsserviço baseado em FastAPI para predições
+- **Suporte Docker:** Implantação containerizada com Docker Compose
+- **Pipeline CI/CD:** Testes automatizados e verificações de qualidade
+- **Testes Abrangentes:** Testes unitários e de integração com pytest
+- **Segurança de Tipos:** Type hints completos com validação mypy
+- **Qualidade de Código:** Integração com Black, isort, flake8 e bandit
+
+### 📈 Análises Avançadas
+- **Importância de Features:** Análise SHAP e importância baseada em árvores
+- **Validação Cruzada:** Avaliação robusta de modelos
+- **Ajuste de Hiperparâmetros:** Configurações otimizadas de modelos
+- **Interpretabilidade do Modelo:** Explicações claras das predições
+
+---
+
+## 🎬 Capturas de Tela e Apresentação
+
+### 📸 Visão Visual
 
 <div align="center">
 
-#### 🖥️ Interactive Dashboard
-![Dashboard Preview](assets/screenshots/dashboard_preview.png)
-*Streamlit dashboard with real-time predictions, model comparison, and interactive visualizations*
+#### 🖥️ Dashboard Interativo
+![Prévia do Dashboard](assets/screenshots/dashboard_preview.png)
+*Dashboard Streamlit com predições em tempo real, comparação de modelos e visualizações interativas*
 
-#### 🚀 REST API Documentation
-![API Preview](assets/screenshots/api_preview.png)
-*FastAPI OpenAPI interface with interactive endpoint testing*
+#### 🚀 Documentação da API REST
+![Prévia da API](assets/screenshots/api_preview.png)
+*Interface OpenAPI do FastAPI com teste interativo de endpoints*
 
-#### 🏗️ System Architecture
-![Architecture Diagram](assets/screenshots/architecture.png)
-*Production-ready architecture with multiple interfaces and Docker deployment*
+#### 🏗️ Arquitetura do Sistema
+![Diagrama de Arquitetura](assets/screenshots/architecture.png)
+*Arquitetura pronta para produção com múltiplas interfaces e implantação Docker*
 
-#### 📊 Model Results & Insights
-![Results Summary](assets/screenshots/results_summary.png)
-*Comprehensive performance comparison and key findings*
+#### 📊 Resultados do Modelo e Insights
+![Resumo de Resultados](assets/screenshots/results_summary.png)
+*Comparação abrangente de desempenho e principais descobertas*
 
-#### 🔍 Feature Analysis
-![Feature Analysis](assets/screenshots/feature_analysis.png)
-*Feature importance, correlations, and relationships*
+#### 🔍 Análise de Features
+![Análise de Features](assets/screenshots/feature_analysis.png)
+*Importância de features, correlações e relacionamentos*
 
 </div>
 
-### 🎓 Academic Presentation
+### 🎓 Apresentação Acadêmica
 
-📊 **[View the interactive presentation](apresentacao.html)** - Professional slides covering:
-- Project overview and methodology
-- Technical architecture and implementation
-- Machine learning results and insights
-- Production deployment and features
+📊 **[Veja a apresentação interativa](apresentacao.html)** - Slides profissionais cobrindo:
+- Visão geral do projeto e metodologia
+- Arquitetura técnica e implementação
+- Resultados e insights de machine learning
+- Implantação em produção e funcionalidades
 
-Open `apresentacao.html` in your browser for a full-screen, navigable presentation built with Reveal.js.
+Abra `apresentacao.html` no seu navegador para uma apresentação em tela cheia e navegável construída com Reveal.js.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Arquitetura
 
 <div align="center">
 
 ```
 ┌─────────────────┐         ┌──────────────────┐
-│  Data Sources   │────────▶│  Data Pipeline   │
-│  (Spotify API)  │         │  (Preprocessing) │
+│  Fontes de      │────────▶│  Pipeline de     │
+│  Dados (API     │         │  Dados (Pré-     │
+│  Spotify)       │         │  processamento)  │
 └─────────────────┘         └──────────────────┘
                                      │
                                      ▼
                             ┌──────────────────┐
-                            │  ML Models       │
-                            │  (6 Regressors)  │
+                            │  Modelos ML      │
+                            │  (6 Regressores) │
                             └──────────────────┘
                                      │
                     ┌────────────────┼────────────────┐
                     ▼                ▼                ▼
             ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-            │  REST API    │  │  Dashboard   │  │  Jupyter     │
+            │  API REST    │  │  Dashboard   │  │  Jupyter     │
             │  (FastAPI)   │  │  (Streamlit) │  │  Notebooks   │
             └──────────────┘  └──────────────┘  └──────────────┘
 ```
@@ -152,136 +153,136 @@ Open `apresentacao.html` in your browser for a full-screen, navigable presentati
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-### Using Docker (Recommended)
+### Usando Docker (Recomendado)
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone https://github.com/tavs-coelho/An-lise-Spotify.git
 cd An-lise-Spotify
 
-# Start all services with Docker Compose
+# Inicie todos os serviços com Docker Compose
 docker-compose up -d
 
-# Access the services
-# - API Documentation: http://localhost:8000/docs
-# - Streamlit Dashboard: http://localhost:8501
+# Acesse os serviços
+# - Documentação da API: http://localhost:8000/docs
+# - Dashboard Streamlit: http://localhost:8501
 ```
 
-### Local Development
+### Desenvolvimento Local
 
 ```bash
-# 1. Clone and navigate
+# 1. Clone e navegue
 git clone https://github.com/tavs-coelho/An-lise-Spotify.git
 cd An-lise-Spotify
 
-# 2. Create virtual environment
+# 2. Crie ambiente virtual
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 
-# 3. Install dependencies
+# 3. Instale dependências
 pip install -r requirements.txt
 pip install -e .
 
-# 4. Run the application
-# Option A: Streamlit Dashboard
+# 4. Execute a aplicação
+# Opção A: Dashboard Streamlit
 streamlit run app.py
 
-# Option B: FastAPI Server
+# Opção B: Servidor FastAPI
 uvicorn api:app --reload
 
-# Option C: Jupyter Notebook
+# Opção C: Jupyter Notebook
 jupyter notebook analise_completa_final.ipynb
 ```
 
 ---
 
-## 📦 Installation
+## 📦 Instalação
 
-### Prerequisites
+### Pré-requisitos
 
-- **Python 3.8+** (3.10 recommended)
-- **pip** (latest version)
+- **Python 3.8+** (3.10 recomendado)
+- **pip** (versão mais recente)
 - **Git**
-- **Docker & Docker Compose** (optional, for containerized deployment)
+- **Docker & Docker Compose** (opcional, para implantação containerizada)
 
-### Step-by-Step Installation
+### Instalação Passo a Passo
 
-#### 1. Clone the Repository
+#### 1. Clone o Repositório
 
 ```bash
 git clone https://github.com/tavs-coelho/An-lise-Spotify.git
 cd An-lise-Spotify
 ```
 
-#### 2. Create Virtual Environment
+#### 2. Crie Ambiente Virtual
 
 ```bash
-# Using venv
+# Usando venv
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # venv\Scripts\activate   # Windows
 
-# Or using conda
+# Ou usando conda
 conda create -n spotify-analysis python=3.10
 conda activate spotify-analysis
 ```
 
-#### 3. Install Dependencies
+#### 3. Instale Dependências
 
 ```bash
-# Install core dependencies
+# Instale dependências principais
 pip install -r requirements.txt
 
-# Install package in development mode
+# Instale o pacote em modo de desenvolvimento
 pip install -e .
 
-# Optional: Install development dependencies
-pip install -r requirements-dev.txt  # If exists
+# Opcional: Instale dependências de desenvolvimento
+pip install -r requirements-dev.txt  # Se existir
 ```
 
-#### 4. Download Dataset (Optional)
+#### 4. Baixe o Dataset (Opcional)
 
-The project works with sample data, but for full analysis:
+O projeto funciona com dados de amostra, mas para análise completa:
 
 ```bash
-# Download from Kaggle (requires Kaggle API)
+# Baixe do Kaggle (requer API do Kaggle)
 kaggle datasets download -d zaheenhamidani/ultimate-spotify-tracks-db
 unzip ultimate-spotify-tracks-db.zip -d data/
 ```
 
 ---
 
-## 💻 Usage
+## 💻 Uso
 
-### 1. Interactive Dashboard
+### 1. Dashboard Interativo
 
-Launch the Streamlit dashboard for interactive exploration:
+Lance o dashboard Streamlit para exploração interativa:
 
 ```bash
 streamlit run app.py
 ```
 
-Features:
-- 📊 Explore data statistics and distributions
-- 🤖 Compare model performances
-- 📈 Visualize feature importance
-- 🎯 Make real-time predictions
+Funcionalidades:
+- 📊 Explore estatísticas e distribuições dos dados
+- 🤖 Compare desempenhos dos modelos
+- 📈 Visualize importância de features
+- 🎯 Faça predições em tempo real
 
-### 2. REST API
+### 2. API REST
 
-Start the FastAPI server:
+Inicie o servidor FastAPI:
 
 ```bash
 uvicorn api:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Access API documentation:
+Acesse a documentação da API:
 - **Swagger UI:** http://localhost:8000/docs
 - **ReDoc:** http://localhost:8000/redoc
 
-Example API request:
+Exemplo de requisição à API:
 
 ```python
 import requests
@@ -303,27 +304,27 @@ response = requests.post(url, json=payload)
 print(response.json())
 ```
 
-### 3. Python Package
+### 3. Pacote Python
 
-Use as a Python library:
+Use como uma biblioteca Python:
 
 ```python
 from spotify_analysis.data import DataLoader, DataPreprocessor
 from spotify_analysis.models import ModelTrainer
 from spotify_analysis.visualization import plot_feature_importance
 
-# Load and preprocess data
+# Carregue e pré-processe os dados
 loader = DataLoader()
 df = loader.load_data()
 
 preprocessor = DataPreprocessor()
 X_processed = preprocessor.fit_transform(df)
 
-# Train model
+# Treine o modelo
 trainer = ModelTrainer('xgboost')
 trainer.fit(X_train, y_train)
 
-# Evaluate and visualize
+# Avalie e visualize
 metrics = trainer.evaluate(X_test, y_test)
 importance_df = trainer.get_feature_importance()
 plot_feature_importance(importance_df)
@@ -331,7 +332,7 @@ plot_feature_importance(importance_df)
 
 ### 4. Jupyter Notebooks
 
-Explore the complete analysis:
+Explore a análise completa:
 
 ```bash
 jupyter notebook analise_completa_final.ipynb
@@ -339,32 +340,32 @@ jupyter notebook analise_completa_final.ipynb
 
 ---
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 An-lise-Spotify/
-├── 📂 src/spotify_analysis/          # Main package
-│   ├── 📂 data/                      # Data loading & preprocessing
+├── 📂 src/spotify_analysis/          # Pacote principal
+│   ├── 📂 data/                      # Carregamento e pré-processamento de dados
 │   │   └── __init__.py
-│   ├── 📂 models/                    # ML models
+│   ├── 📂 models/                    # Modelos de ML
 │   │   └── __init__.py
-│   ├── 📂 visualization/             # Plotting utilities
+│   ├── 📂 visualization/             # Utilitários de plotagem
 │   │   └── __init__.py
-│   ├── 📂 utils/                     # Helper functions
+│   ├── 📂 utils/                     # Funções auxiliares
 │   │   └── __init__.py
 │   ├── __init__.py
-│   └── config.py                     # Configuration
+│   └── config.py                     # Configuração
 │
-├── 📂 tests/                         # Unit & integration tests
+├── 📂 tests/                         # Testes unitários e de integração
 │   ├── test_data.py
 │   ├── test_models.py
 │   └── conftest.py
 │
 ├── 📂 notebooks/                     # Jupyter notebooks
 │   ├── analise_completa_final.ipynb
-│   └── 📂 figures/                   # Generated plots
+│   └── 📂 figures/                   # Plots gerados
 │
-├── 📂 docs/                          # Documentation
+├── 📂 docs/                          # Documentação
 │   ├── 1_entendimento_negocio.md
 │   └── relatorio_tecnico.md
 │
@@ -372,50 +373,50 @@ An-lise-Spotify/
 │   └── workflows/
 │       └── ci.yml
 │
-├── 📂 data/                          # Data directory (gitignored)
+├── 📂 data/                          # Diretório de dados (gitignored)
 │   └── .gitkeep
 │
-├── 📂 models/                        # Saved models (gitignored)
+├── 📂 models/                        # Modelos salvos (gitignored)
 │   └── .gitkeep
 │
-├── 📄 app.py                         # Streamlit dashboard
-├── 📄 api.py                         # FastAPI application
-├── 📄 setup.py                       # Package setup
-├── 📄 pyproject.toml                 # Modern Python config
-├── 📄 requirements.txt               # Dependencies
-├── 📄 Dockerfile                     # Docker configuration
-├── 📄 docker-compose.yml             # Multi-container setup
-├── 📄 .gitignore                     # Git ignore rules
-├── 📄 LICENSE                        # MIT License
-└── 📄 README.md                      # This file
+├── 📄 app.py                         # Dashboard Streamlit
+├── 📄 api.py                         # Aplicação FastAPI
+├── 📄 setup.py                       # Configuração do pacote
+├── 📄 pyproject.toml                 # Configuração Python moderna
+├── 📄 requirements.txt               # Dependências
+├── 📄 Dockerfile                     # Configuração Docker
+├── 📄 docker-compose.yml             # Configuração multi-container
+├── 📄 .gitignore                     # Regras do Git ignore
+├── 📄 LICENSE                        # Licença MIT
+└── 📄 README.md                      # Este arquivo
 ```
 
 ---
 
-## 🔬 Methodology (CRISP-DM)
+## 🔬 Metodologia (CRISP-DM)
 
 
-### 1. **Business Understanding** 🎯
-- **Problem:** Predict music popularity using audio features
-- **Goal:** R² > 0.20, MAE < 15
-- **Stakeholders:** Artists, record labels, streaming platforms
+### 1. **Entendimento do Negócio** 🎯
+- **Problema:** Prever popularidade de músicas usando características de áudio
+- **Meta:** R² > 0.20, MAE < 15
+- **Stakeholders:** Artistas, gravadoras, plataformas de streaming
 
-### 2. **Data Understanding** 📊
-- **Dataset:** 113,999 Spotify tracks
-- **Features:** 23 variables (9 core audio features)
-- **Target:** Popularity score (0-100)
-- **Source:** Spotify Web API
+### 2. **Entendimento dos Dados** 📊
+- **Dataset:** 113.999 faixas do Spotify
+- **Features:** 23 variáveis (9 características principais de áudio)
+- **Alvo:** Pontuação de popularidade (0-100)
+- **Fonte:** API Web do Spotify
 
-### 3. **Data Preparation** 🔧
-- Missing value handling (< 1% of data)
-- Feature scaling with StandardScaler
-- One-hot encoding for categorical variables
-- 80/20 train-test split with stratification
+### 3. **Preparação dos Dados** 🔧
+- Tratamento de valores ausentes (< 1% dos dados)
+- Escalonamento de features com StandardScaler
+- Codificação one-hot para variáveis categóricas
+- Divisão treino/teste 80/20 com estratificação
 
-### 4. **Modeling** 🤖
+### 4. **Modelagem** 🤖
 
-#### Regression Models (Popularity Prediction)
-| Model | R² | MAE | RMSE | Training Time |
+#### Modelos de Regressão (Predição de Popularidade)
+| Modelo | R² | MAE | RMSE | Tempo de Treino |
 |-------|-----|-----|------|---------------|
 | **XGBoost** ⭐ | **0.254** | **12.48** | **16.92** | ~15s |
 | Gradient Boosting | 0.241 | 12.73 | 17.15 | ~45s |
@@ -424,102 +425,102 @@ An-lise-Spotify/
 | Ridge | 0.182 | 14.35 | 19.01 | ~1s |
 | Lasso | 0.179 | 14.48 | 19.12 | ~1s |
 
-#### Additional Techniques
-- **Classification:** Multi-class categorization (Low/Medium/High)
-- **Clustering:** K-Means with 4 distinct music profiles
-- **Recommendation:** Cosine similarity-based system
+#### Técnicas Adicionais
+- **Classificação:** Categorização multi-classe (Baixa/Média/Alta)
+- **Clustering:** K-Means com 4 perfis musicais distintos
+- **Recomendação:** Sistema baseado em similaridade de cosseno
 
-### 5. **Evaluation** 📈
-- **Metrics:** MAE, RMSE, R², Accuracy, F1-Score, Silhouette
-- **Cross-Validation:** 5-fold CV for robust estimates
-- **Feature Importance:** SHAP and tree-based analysis
+### 5. **Avaliação** 📈
+- **Métricas:** MAE, RMSE, R², Acurácia, F1-Score, Silhouette
+- **Validação Cruzada:** 5-fold CV para estimativas robustas
+- **Importância de Features:** Análise SHAP e baseada em árvores
 
-### 6. **Deployment** 🚀
-- **REST API:** FastAPI microservice
-- **Dashboard:** Interactive Streamlit application
-- **Docker:** Containerized for easy deployment
-- **CI/CD:** Automated testing and quality checks
-
----
-
-## 📊 Results
-
-### 🏆 Best Model: XGBoost
-
-- **R² Score:** 0.254 (explains 25% of variance)
-- **MAE:** 12.48 points (acceptable error on 0-100 scale)
-- **Interpretation:** Audio features explain ~25% of popularity; external factors (marketing, artist fame, virality) account for the rest
-
-### 🎯 Top 5 Most Important Features
-
-1. **Loudness** (28.5%) - Volume is the strongest predictor
-2. **Energy** (19.8%) - High-energy tracks tend to be more popular
-3. **Danceability** (15.6%) - Danceable music performs better
-4. **Valence** (12.4%) - Positive-sounding tracks are favored
-5. **Acousticness** (8.9%) - Less acoustic = more popular
-
-### 💡 Key Insights
-
-✅ **Audio features have moderate predictive power** - R² of 0.25 indicates intrinsic musical characteristics explain a significant but not complete portion of popularity
-
-✅ **Intensity matters** - Loud, energetic tracks dominate popularity charts
-
-✅ **Tree-based models outperform linear models** - Non-linear relationships are important
-
-✅ **Four distinct music profiles exist** - Natural clustering reveals different musical archetypes
-
-⚠️ **External factors are critical** - Marketing, artist reputation, and timing play major roles not captured by audio features alone
+### 6. **Implantação** 🚀
+- **API REST:** Microsserviço FastAPI
+- **Dashboard:** Aplicação interativa Streamlit
+- **Docker:** Containerizado para fácil implantação
+- **CI/CD:** Testes automatizados e verificações de qualidade
 
 ---
 
-## 🛠️ Technologies
+## 📊 Resultados
 
-### Core Stack
+### 🏆 Melhor Modelo: XGBoost
+
+- **Pontuação R²:** 0.254 (explica 25% da variância)
+- **MAE:** 12.48 pontos (erro aceitável na escala 0-100)
+- **Interpretação:** Características de áudio explicam ~25% da popularidade; fatores externos (marketing, fama do artista, viralização) representam o restante
+
+### 🎯 Top 5 Features Mais Importantes
+
+1. **Loudness** (28.5%) - Volume é o preditor mais forte
+2. **Energy** (19.8%) - Faixas de alta energia tendem a ser mais populares
+3. **Danceability** (15.6%) - Músicas dançantes têm melhor desempenho
+4. **Valence** (12.4%) - Faixas com som positivo são favorecidas
+5. **Acousticness** (8.9%) - Menos acústico = mais popular
+
+### 💡 Principais Insights
+
+✅ **Características de áudio têm poder preditivo moderado** - R² de 0.25 indica que características musicais intrínsecas explicam uma porção significativa, mas não completa, da popularidade
+
+✅ **Intensidade importa** - Faixas altas e energéticas dominam as paradas de popularidade
+
+✅ **Modelos baseados em árvores superam modelos lineares** - Relacionamentos não-lineares são importantes
+
+✅ **Existem quatro perfis musicais distintos** - Clustering natural revela diferentes arquétipos musicais
+
+⚠️ **Fatores externos são críticos** - Marketing, reputação do artista e timing desempenham papéis importantes não capturados apenas pelas características de áudio
+
+---
+
+## 🛠️ Tecnologias
+
+### Stack Principal
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  Language        │  Python 3.8+                         │
-│  ML Framework    │  scikit-learn 1.3+, XGBoost 2.0+    │
-│  Data Processing │  Pandas 2.1+, NumPy 1.26+           │
-│  Visualization   │  Matplotlib, Seaborn, Plotly        │
+│  Linguagem       │  Python 3.8+                         │
+│  Framework ML    │  scikit-learn 1.3+, XGBoost 2.0+    │
+│  Proc. de Dados  │  Pandas 2.1+, NumPy 1.26+           │
+│  Visualização    │  Matplotlib, Seaborn, Plotly        │
 └─────────────────────────────────────────────────────────┘
 ```
 
 ### Web & API
-- **FastAPI** - Modern REST API framework
-- **Streamlit** - Interactive dashboards
-- **Uvicorn** - ASGI server
-- **Pydantic** - Data validation
+- **FastAPI** - Framework moderno de API REST
+- **Streamlit** - Dashboards interativos
+- **Uvicorn** - Servidor ASGI
+- **Pydantic** - Validação de dados
 
 ### ML & Analytics
-- **scikit-learn** - ML algorithms & pipelines
+- **scikit-learn** - Algoritmos e pipelines de ML
 - **XGBoost** - Gradient boosting
-- **SHAP** - Model interpretability
-- **MLflow** - Experiment tracking (optional)
+- **SHAP** - Interpretabilidade de modelos
+- **MLflow** - Rastreamento de experimentos (opcional)
 
-### Development & Deployment
-- **Docker** - Containerization
-- **Docker Compose** - Multi-container orchestration
-- **GitHub Actions** - CI/CD pipeline
-- **pytest** - Testing framework
-- **Black** - Code formatting
-- **mypy** - Type checking
+### Desenvolvimento & Implantação
+- **Docker** - Containerização
+- **Docker Compose** - Orquestração multi-container
+- **GitHub Actions** - Pipeline CI/CD
+- **pytest** - Framework de testes
+- **Black** - Formatação de código
+- **mypy** - Verificação de tipos
 - **flake8** - Linting
-- **bandit** - Security analysis
+- **bandit** - Análise de segurança
 
 ---
 
-## 📚 API Documentation
+## 📚 Documentação da API
 
-### REST API Endpoints
+### Endpoints da API REST
 
-Base URL: `http://localhost:8000`
+URL Base: `http://localhost:8000`
 
-#### 🏥 Health Check
+#### 🏥 Verificação de Saúde
 ```http
 GET /health
 ```
 
-Response:
+Resposta:
 ```json
 {
   "status": "healthy",
@@ -528,13 +529,13 @@ Response:
 }
 ```
 
-#### 🎯 Single Prediction
+#### 🎯 Predição Única
 ```http
 POST /predict
 Content-Type: application/json
 ```
 
-Request Body:
+Corpo da Requisição:
 ```json
 {
   "danceability": 0.735,
@@ -549,7 +550,7 @@ Request Body:
 }
 ```
 
-Response:
+Resposta:
 ```json
 {
   "predicted_popularity": 65.32,
@@ -563,122 +564,122 @@ Response:
 }
 ```
 
-#### 📊 Batch Prediction
+#### 📊 Predição em Lote
 ```http
 POST /predict/batch
 Content-Type: application/json
 ```
 
-Request: Array of track features (max 100)
+Requisição: Array de características de faixas (máx 100)
 
-#### ℹ️ Model Info
+#### ℹ️ Informações do Modelo
 ```http
 GET /model/info
 ```
 
-#### 📖 Feature Descriptions
+#### 📖 Descrições de Features
 ```http
 GET /features
 ```
 
 ---
 
-## 🧪 Testing
+## 🧪 Testes
 
-### Run Tests
+### Executar Testes
 
 ```bash
-# Run all tests
+# Execute todos os testes
 pytest
 
-# Run with coverage
+# Execute com cobertura
 pytest --cov=src/spotify_analysis --cov-report=html
 
-# Run specific test file
+# Execute arquivo de teste específico
 pytest tests/test_models.py
 
-# Run with verbose output
+# Execute com saída verbosa
 pytest -v
 
-# Run and show print statements
+# Execute e mostre declarações de print
 pytest -s
 ```
 
-### Code Quality Checks
+### Verificações de Qualidade de Código
 
 ```bash
-# Format code
+# Formate o código
 black src/ tests/
 
-# Sort imports
+# Ordene imports
 isort src/ tests/
 
-# Lint code
+# Lint do código
 flake8 src/ tests/
 
-# Type check
+# Verificação de tipos
 mypy src/
 
-# Security scan
+# Scan de segurança
 bandit -r src/
 ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-We welcome contributions! Please follow these guidelines:
+Contribuições são bem-vindas! Por favor, siga estas diretrizes:
 
-### How to Contribute
+### Como Contribuir
 
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
+1. **Faça fork do repositório**
+2. **Crie uma branch de feature** (`git checkout -b feature/FuncionalidadeIncrivel`)
+3. **Commit suas mudanças** (`git commit -m 'Add some FuncionalidadeIncrivel'`)
+4. **Push para a branch** (`git push origin feature/FuncionalidadeIncrivel`)
+5. **Abra um Pull Request**
 
-### Development Guidelines
+### Diretrizes de Desenvolvimento
 
-- Follow PEP 8 style guide
-- Add type hints to all functions
-- Write unit tests for new features
-- Update documentation as needed
-- Ensure all tests pass before submitting PR
+- Siga o guia de estilo PEP 8
+- Adicione type hints a todas as funções
+- Escreva testes unitários para novas funcionalidades
+- Atualize a documentação conforme necessário
+- Certifique-se de que todos os testes passem antes de enviar o PR
 
-### Code Style
+### Estilo de Código
 
-This project uses:
-- **Black** for code formatting (line length: 100)
-- **isort** for import sorting
-- **flake8** for linting
-- **mypy** for type checking
+Este projeto usa:
+- **Black** para formatação de código (comprimento de linha: 100)
+- **isort** para ordenação de imports
+- **flake8** para linting
+- **mypy** para verificação de tipos
 
 ---
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+Este projeto está licenciado sob a **Licença MIT** - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ```
-MIT License
+Licença MIT
 
 Copyright (c) 2025 Geyson de Araujo
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
+É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
+deste software e arquivos de documentação associados (o "Software"), para lidar
+no Software sem restrição...
 ```
 
 ---
 
-## 📖 Citation
+## 📖 Citação
 
-If you use this project in your research or work, please cite:
+Se você usar este projeto em sua pesquisa ou trabalho, por favor cite:
 
 ```bibtex
 @software{araujo2025spotify,
   author = {Araujo, Geyson de},
-  title = {Spotify Music Popularity Analysis: A Machine Learning Approach},
+  title = {Análise de Popularidade de Músicas no Spotify: Uma Abordagem de Machine Learning},
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/tavs-coelho/An-lise-Spotify}
@@ -687,53 +688,53 @@ If you use this project in your research or work, please cite:
 
 ---
 
-## 📧 Contact
+## 📧 Contato
 
 **Geyson de Araujo**
 
 - GitHub: [@tavs-coelho](https://github.com/tavs-coelho)
-- Repository: [An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
-- Project Link: [https://github.com/tavs-coelho/An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
+- Repositório: [An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
+- Link do Projeto: [https://github.com/tavs-coelho/An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimentos
 
-- **Spotify** for providing the Web API
-- **Kaggle** community for dataset compilation
-- **scikit-learn** and **XGBoost** teams for excellent ML libraries
-- Academic advisors and peer reviewers
-
----
-
-## 📚 Additional Resources
-
-- [Technical Report (Portuguese)](relatorio_tecnico.md) - Detailed analysis and methodology
-- [Business Understanding](docs/1_entendimento_negocio.md) - Problem definition and objectives
-- [Jupyter Notebook](notebooks/analise_completa_final.ipynb) - Complete analysis walkthrough
-- [API Documentation](http://localhost:8000/docs) - Interactive API docs (when server is running)
+- **Spotify** por fornecer a API Web
+- Comunidade **Kaggle** pela compilação do dataset
+- Times **scikit-learn** e **XGBoost** pelas excelentes bibliotecas de ML
+- Orientadores acadêmicos e revisores
 
 ---
 
-## 🌟 Future Enhancements
+## 📚 Recursos Adicionais
 
-- [ ] Add temporal analysis (popularity trends over time)
-- [ ] Include artist metadata and social media metrics
-- [ ] Implement NLP analysis on song lyrics
-- [ ] Add deep learning models (Neural Networks)
-- [ ] Create mobile application
-- [ ] Integrate with Spotify API for real-time data
-- [ ] Add A/B testing framework
-- [ ] Implement MLOps pipeline with MLflow
+- [Relatório Técnico (Português)](relatorio_tecnico.md) - Análise detalhada e metodologia
+- [Entendimento de Negócio](docs/1_entendimento_negocio.md) - Definição do problema e objetivos
+- [Jupyter Notebook](notebooks/analise_completa_final.ipynb) - Passo a passo completo da análise
+- [Documentação da API](http://localhost:8000/docs) - Docs interativas da API (quando o servidor estiver rodando)
+
+---
+
+## 🌟 Melhorias Futuras
+
+- [ ] Adicionar análise temporal (tendências de popularidade ao longo do tempo)
+- [ ] Incluir metadados do artista e métricas de redes sociais
+- [ ] Implementar análise NLP de letras de músicas
+- [ ] Adicionar modelos de deep learning (Redes Neurais)
+- [ ] Criar aplicação mobile
+- [ ] Integrar com API do Spotify para dados em tempo real
+- [ ] Adicionar framework de testes A/B
+- [ ] Implementar pipeline MLOps com MLflow
 
 ---
 
 <div align="center">
 
-**⭐ If you find this project useful, please consider giving it a star!**
+**⭐ Se você achar este projeto útil, por favor considere dar uma estrela!**
 
-Made with ❤️ and 🎵 by [Geyson de Araujo](https://github.com/tavs-coelho)
+Feito com ❤️ e 🎵 por [Geyson de Araujo](https://github.com/tavs-coelho)
 
-[⬆ Back to Top](#-spotify-music-popularity-analysis)
+[⬆ Voltar ao Topo](#-análise-de-popularidade-de-músicas-no-spotify)
 
 </div>
