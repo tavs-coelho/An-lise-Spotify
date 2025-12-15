@@ -1,5 +1,14 @@
 # 🎵 Análise de Popularidade de Músicas no Spotify
 
+<div align="center">
+
+![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
+
+</div>
+
 ## 📊 Projeto Final - Aprendizagem de Máquina
 
 **Autor:** Geyson de Araujo  
@@ -22,12 +31,38 @@ Como prever a popularidade de músicas baseado em features musicais objetivas (d
 
 ```
 An-lise-Spotify/
-├── 1_entendimento_negocio.md       # Contexto e objetivos do projeto
-├── analise_completa_final.ipynb    # Notebook completo com todas as análises
-├── relatorio_tecnico.md            # Relatório técnico detalhado
-├── apresentacao.md                 # Slides da apresentação
-├── spotify_songs.csv               # Dataset (113.999 músicas)
-└── README.md                       # Este arquivo
+├── src/                            # Código fonte principal
+│   ├── data/                       # Módulos de processamento de dados
+│   │   └── loader.py              # Carregamento e preparação de dados
+│   ├── models/                    # Módulos de modelagem ML
+│   │   └── predictor.py          # Treinamento e predição
+│   ├── api/                       # API REST (FastAPI)
+│   │   └── app.py                # Endpoints da API
+│   ├── dashboard/                 # Dashboard interativo
+│   │   └── app.py                # Interface Streamlit
+│   └── utils/                     # Utilitários e configurações
+│       └── config.py             # Gerenciamento de configurações
+├── tests/                         # Testes automatizados
+│   ├── test_data_loader.py       # Testes de carregamento de dados
+│   └── test_predictor.py         # Testes de modelos
+├── data/                          # Dados brutos e processados
+│   ├── raw/                      # Dados originais
+│   └── processed/                # Dados preprocessados
+├── models/                        # Modelos treinados salvos
+├── logs/                          # Logs da aplicação
+├── .github/workflows/            # Pipelines CI/CD
+│   └── ci.yml                   # Workflow de integração contínua
+├── 1_entendimento_negocio.md     # Contexto e objetivos
+├── analise_completa_final.ipynb  # Notebook completo de análise
+├── relatorio_tecnico.md          # Relatório técnico detalhado
+├── config.yaml                   # Configurações do projeto
+├── requirements.txt              # Dependências Python
+├── Dockerfile                    # Container Docker
+├── docker-compose.yml            # Orquestração de serviços
+├── main.py                       # Script principal
+├── LICENSE                       # Licença MIT
+├── CONTRIBUTING.md               # Guia de contribuição
+└── README.md                     # Este arquivo
 ```
 
 ---
@@ -108,10 +143,11 @@ An-lise-Spotify/
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-- Python 3.8+
-- Jupyter Notebook
+- Python 3.9+ 
+- Docker (opcional, para containerização)
+- Git
 
-### Instalação
+### 🔧 Instalação Local
 
 ```bash
 # 1. Clonar o repositório
@@ -124,34 +160,119 @@ source venv/bin/activate  # Linux/Mac
 # venv\Scripts\activate   # Windows
 
 # 3. Instalar dependências
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter scipy
+pip install -r requirements.txt
 
-# 4. Abrir o notebook
-jupyter notebook analise_completa_final.ipynb
+# 4. Executar análise principal
+python main.py
 ```
 
-### Execução
-No Jupyter Notebook:
-- **Opção 1**: Execute célula por célula (`Shift + Enter`)
-- **Opção 2**: Execute tudo de uma vez (`Cell → Run All`)
+### 📓 Executar Jupyter Notebook
+
+```bash
+# Iniciar Jupyter
+jupyter notebook
+
+# Abrir analise_completa_final.ipynb
+# Execute célula por célula (Shift + Enter)
+# Ou execute tudo (Cell → Run All)
+```
+
+### 🐳 Executar com Docker
+
+```bash
+# Construir imagem
+docker build -t spotify-analytics .
+
+# Executar análise principal
+docker run spotify-analytics
+
+# Ou usar docker-compose para todos os serviços
+docker-compose up
+
+# Acessar serviços:
+# - API: http://localhost:8000
+# - Dashboard: http://localhost:8501
+# - Documentação API: http://localhost:8000/docs
+```
+
+### 🌐 Executar API REST
+
+```bash
+# Iniciar servidor FastAPI
+python -m uvicorn src.api.app:app --reload
+
+# Acessar:
+# - API: http://localhost:8000
+# - Documentação interativa: http://localhost:8000/docs
+# - Documentação alternativa: http://localhost:8000/redoc
+```
+
+### 📊 Executar Dashboard Interativo
+
+```bash
+# Iniciar dashboard Streamlit
+streamlit run src/dashboard/app.py
+
+# Acessar: http://localhost:8501
+```
+
+### 🧪 Executar Testes
+
+```bash
+# Executar todos os testes
+pytest tests/ -v
+
+# Executar com cobertura
+pytest tests/ --cov=src --cov-report=html
+
+# Ver relatório de cobertura
+open htmlcov/index.html  # Linux/Mac
+# start htmlcov/index.html  # Windows
+```
 
 ---
 
-## 📚 Bibliotecas Utilizadas
+## 📚 Tecnologias e Bibliotecas
 
-```python
-# Manipulação de dados
-pandas, numpy
+### Core Data Science
+- **pandas** - Manipulação e análise de dados
+- **numpy** - Computação numérica
+- **scipy** - Análise estatística avançada
 
-# Visualização
-matplotlib, seaborn
+### Machine Learning
+- **scikit-learn** - Modelos clássicos de ML, pré-processamento, métricas
+- **xgboost** - Gradient boosting otimizado
+- **imbalanced-learn** - Técnicas para dados desbalanceados
 
-# Machine Learning
-scikit-learn, xgboost
+### Visualização
+- **matplotlib** - Gráficos base
+- **seaborn** - Visualizações estatísticas
+- **plotly** - Gráficos interativos
 
-# Análise estatística
-scipy
-```
+### Interpretabilidade
+- **shap** - Explicação de modelos (SHAP values)
+
+### MLOps e Experimentação
+- **mlflow** - Rastreamento de experimentos e versionamento de modelos
+
+### API e Web
+- **fastapi** - Framework web moderno para APIs REST
+- **uvicorn** - Servidor ASGI de alta performance
+- **streamlit** - Dashboard interativo
+
+### Validação e Configuração
+- **pydantic** - Validação de dados e settings
+- **pyyaml** - Gerenciamento de configurações
+
+### Desenvolvimento e Testes
+- **pytest** - Framework de testes
+- **black** - Formatação de código
+- **flake8** - Linting
+- **mypy** - Type checking
+
+### Deployment
+- **Docker** - Containerização
+- **docker-compose** - Orquestração de containers
 
 ---
 
@@ -191,13 +312,44 @@ scipy
 
 ---
 
+## ✨ Funcionalidades Principais
+
+### 🤖 Machine Learning Pipeline
+- ✅ Treinamento automático de múltiplos modelos (Ridge, Random Forest, XGBoost)
+- ✅ Cross-validation e métricas de avaliação completas
+- ✅ Salvamento e versionamento de modelos
+- ✅ Feature importance e interpretabilidade (SHAP)
+
+### 🌐 API REST (FastAPI)
+- ✅ Endpoints para predição individual e em lote
+- ✅ Documentação interativa automática (Swagger/OpenAPI)
+- ✅ Validação de entrada com Pydantic
+- ✅ Health checks e monitoramento
+
+### 📊 Dashboard Interativo (Streamlit)
+- ✅ Visualização de dados exploratória
+- ✅ Interface para predição em tempo real
+- ✅ Análise de features e correlações
+- ✅ Gráficos interativos e métricas
+
+### 🐳 Deployment
+- ✅ Containerização com Docker
+- ✅ Orquestração multi-serviço com docker-compose
+- ✅ CI/CD com GitHub Actions
+- ✅ Testes automatizados
+
 ## 🔮 Trabalhos Futuros
 
-- Incluir dados temporais (tendências ao longo do tempo)
-- Adicionar informações de contexto (artista, gravadora, playlists)
-- Aplicar técnicas de NLP em letras das músicas
-- Testar modelos de Deep Learning (Redes Neurais)
-- Implementar API para predição em tempo real
+- [ ] Incluir dados temporais (análise de séries temporais)
+- [ ] Adicionar informações de contexto (artista, gravadora, playlists)
+- [ ] Aplicar técnicas de NLP em letras das músicas
+- [ ] Testar modelos de Deep Learning (Redes Neurais, Transformers)
+- [ ] Implementar modelo de recomendação baseado em collaborative filtering
+- [ ] Adicionar autenticação e autorização na API
+- [ ] Deploy em cloud (AWS, GCP, Azure)
+- [ ] Monitoramento de performance em produção com Prometheus/Grafana
+- [ ] A/B testing framework para comparação de modelos
+- [ ] Feature store para gerenciamento de features
 
 ---
 

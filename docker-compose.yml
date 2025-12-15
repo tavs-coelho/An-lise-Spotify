@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Main application
+  app:
+    build: .
+    container_name: spotify-analytics-app
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+    command: python main.py
+    networks:
+      - spotify-network
+
+  # FastAPI service
+  api:
+    build: .
+    container_name: spotify-analytics-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+    command: python -m uvicorn src.api.app:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - spotify-network
+    depends_on:
+      - app
+
+  # Streamlit Dashboard service
+  dashboard:
+    build: .
+    container_name: spotify-analytics-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+    command: streamlit run src/dashboard/app.py --server.port=8501 --server.address=0.0.0.0
+    networks:
+      - spotify-network
+    depends_on:
+      - app
+
+networks:
+  spotify-network:
+    driver: bridge
