@@ -1,7 +1,7 @@
-# Models Directory
+# Diretório de Modelos
 
-This directory stores trained machine learning models and related artifacts.
+Este diretório armazena modelos de machine learning treinados e artefatos relacionados.
 
-Models are saved using `joblib` for efficient serialization.
+Os modelos são salvos usando `joblib` para serialização eficiente.
 
-Model files are excluded from git due to size and should be generated during training.
+Os arquivos de modelo são excluídos do git devido ao tamanho e devem ser gerados durante o treinamento.
