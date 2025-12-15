@@ -303,17 +303,56 @@
             <!-- Slide 2: Agenda -->
             <section>
                 <h2><i class="fas fa-list"></i> Agenda</h2>
-                <ul class="feature-list" style="font-size: 0.9em;">
+                <ul class="feature-list" style="font-size: 0.85em;">
                     <li>Contexto e Problema de Negócio</li>
-                    <li>Metodologia CRISP-DM</li>
-                    <li>Arquitetura do Sistema</li>
-                    <li>Análise Exploratória de Dados</li>
+                    <li>Metodologia CRISP-DM e Pipeline</li>
+                    <li>Dataset e Arquitetura do Sistema</li>
+                    <li><strong>Análise Exploratória de Dados (com 10+ gráficos)</strong></li>
+                    <li>Correlações e Distribuições</li>
+                    <li>Análises de Features vs Popularidade</li>
                     <li>Modelos de Machine Learning</li>
+                    <li>Feature Importance e Comparação Visual</li>
                     <li>Resultados e Insights</li>
-                    <li>Interfaces de Produção</li>
-                    <li>Demonstrações Práticas</li>
+                    <li>Interfaces de Produção (API + Dashboard)</li>
                     <li>Conclusões e Trabalhos Futuros</li>
                 </ul>
+                <div style="text-align: center; margin-top: 20px;">
+                    <span class="badge-success">37 Slides Completos</span>
+                    <span class="badge-info">15 Gráficos de Análise</span>
+                    <span class="badge-warning">100% Ilustrado</span>
+                </div>
+            </section>
+
+            <!-- Slide 2B: Por Que Este Projeto? -->
+            <section>
+                <h2><i class="fas fa-question"></i> Por Que Este Projeto?</h2>
+                <div class="tech-stack" style="margin-top: 30px;">
+                    <div class="tech-item">
+                        <i class="fas fa-chart-line" style="font-size: 2.5em;"></i>
+                        <h4>Relevância</h4>
+                        <p style="font-size: 0.75em;">Indústria musical move bilhões, entender popularidade é crucial</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-brain" style="font-size: 2.5em;"></i>
+                        <h4>Desafio Técnico</h4>
+                        <p style="font-size: 0.75em;">Problema complexo de ML com múltiplas features</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-graduation-cap" style="font-size: 2.5em;"></i>
+                        <h4>Aprendizado</h4>
+                        <p style="font-size: 0.75em;">Aplicação completa de CRISP-DM e boas práticas</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-rocket" style="font-size: 2.5em;"></i>
+                        <h4>Produção</h4>
+                        <p style="font-size: 0.75em;">Sistema deployável com API e dashboard</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <p style="text-align: center; font-size: 1em;">
+                        <strong>Objetivo:</strong> Criar uma solução end-to-end que demonstre competências completas em Data Science
+                    </p>
+                </div>
             </section>
 
             <!-- Slide 3: Problema de Negócio -->
@@ -374,14 +413,54 @@
             <!-- Slide 5: Metodologia CRISP-DM -->
             <section>
                 <h2><i class="fas fa-project-diagram"></i> Metodologia CRISP-DM</h2>
-                <ul class="feature-list" style="font-size: 0.85em;">
-                    <li><strong>Entendimento do Negócio:</strong> Definição do problema e KPIs</li>
-                    <li><strong>Entendimento dos Dados:</strong> EDA completa, 113.999 músicas</li>
-                    <li><strong>Preparação dos Dados:</strong> Limpeza, normalização, pipeline</li>
-                    <li><strong>Modelagem:</strong> 6 modelos de regressão + clustering + recomendação</li>
-                    <li><strong>Avaliação:</strong> Métricas (MAE, RMSE, R²), comparação crítica</li>
-                    <li><strong>Implantação:</strong> API REST, Dashboard, Docker, CI/CD</li>
-                </ul>
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <div style="flex: 1;">
+                        <img src="assets/screenshots/branding/crisp_dm_diagram.png" alt="CRISP-DM" style="max-width: 100%; border-radius: 10px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <ul class="feature-list" style="font-size: 0.75em;">
+                            <li><strong>Business Understanding:</strong> Definir problema e KPIs</li>
+                            <li><strong>Data Understanding:</strong> EDA completa</li>
+                            <li><strong>Data Preparation:</strong> Limpeza e pipeline</li>
+                            <li><strong>Modeling:</strong> 6 modelos + clustering</li>
+                            <li><strong>Evaluation:</strong> Métricas e comparação</li>
+                            <li><strong>Deployment:</strong> API, Dashboard, Docker</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5B: Dataset Overview -->
+            <section>
+                <h2><i class="fas fa-database"></i> Dataset: Spotify Songs</h2>
+                <div class="highlight-box">
+                    <h3 style="text-align: center; color: var(--spotify-green);">113.999 Músicas Analisadas</h3>
+                </div>
+                <div class="metrics-grid" style="margin-top: 30px;">
+                    <div class="metric-card">
+                        <div class="metric-value">23</div>
+                        <div class="metric-label">Features Totais</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">9</div>
+                        <div class="metric-label">Features Musicais Principais</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Dados Limpos</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0-100</div>
+                        <div class="metric-label">Escala Popularidade</div>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <p style="text-align: center; font-size: 0.9em;">
+                        <strong>Fonte:</strong> Spotify Web API | 
+                        <strong>Período:</strong> Dataset histórico |
+                        <strong>Tipo:</strong> Dados estruturados
+                    </p>
+                </div>
             </section>
 
             <!-- Slide 6: Arquitetura do Sistema -->
@@ -434,6 +513,39 @@
                 </div>
             </section>
 
+            <!-- Slide 7B: Pipeline de Machine Learning -->
+            <section>
+                <h2><i class="fas fa-stream"></i> Pipeline de Processamento</h2>
+                <div class="code-block" style="font-size: 0.65em; text-align: left;">
+📊 Dados Brutos (113.999 músicas)<br>
+&nbsp;&nbsp;↓<br>
+🔍 Análise Exploratória<br>
+&nbsp;&nbsp;├─ Distribuições de features<br>
+&nbsp;&nbsp;├─ Correlações<br>
+&nbsp;&nbsp;└─ Detecção de outliers<br>
+&nbsp;&nbsp;↓<br>
+🧹 Limpeza e Preparação<br>
+&nbsp;&nbsp;├─ Tratamento de missing values<br>
+&nbsp;&nbsp;├─ Normalização (StandardScaler)<br>
+&nbsp;&nbsp;└─ Feature engineering<br>
+&nbsp;&nbsp;↓<br>
+🤖 Modelagem<br>
+&nbsp;&nbsp;├─ Train/Test Split (80/20)<br>
+&nbsp;&nbsp;├─ 6 Modelos diferentes<br>
+&nbsp;&nbsp;└─ Hyperparameter tuning<br>
+&nbsp;&nbsp;↓<br>
+📈 Avaliação<br>
+&nbsp;&nbsp;├─ Métricas: MAE, RMSE, R²<br>
+&nbsp;&nbsp;├─ Validação cruzada<br>
+&nbsp;&nbsp;└─ Feature importance<br>
+&nbsp;&nbsp;↓<br>
+🚀 Deployment<br>
+&nbsp;&nbsp;├─ Serialização do modelo<br>
+&nbsp;&nbsp;├─ API REST (FastAPI)<br>
+&nbsp;&nbsp;└─ Dashboard (Streamlit)
+                </div>
+            </section>
+
             <!-- Slide 8: Features Musicais -->
             <section>
                 <h2><i class="fas fa-music"></i> Features Musicais</h2>
@@ -478,6 +590,167 @@
                         </tr>
                     </tbody>
                 </table>
+            </section>
+
+            <!-- Slide 9A: Análise Exploratória - Distribuição da Popularidade -->
+            <section>
+                <h2><i class="fas fa-chart-area"></i> Distribuição da Popularidade</h2>
+                <img src="assets/screenshots/analysis/popularity_histogram.png" alt="Distribuição Popularidade" class="architecture-diagram">
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <ul style="font-size: 0.9em;">
+                        <li><strong>Média:</strong> ~38 pontos de popularidade</li>
+                        <li><strong>Distribuição:</strong> Assimétrica à direita</li>
+                        <li><strong>Insight:</strong> Maioria das músicas tem popularidade baixa/média</li>
+                        <li><strong>Poucas músicas:</strong> Atingem alta popularidade (acima de 70)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 9B: Categorias de Popularidade -->
+            <section>
+                <h2><i class="fas fa-chart-pie"></i> Categorias de Popularidade</h2>
+                <img src="assets/screenshots/analysis/popularity_categories.png" alt="Categorias Popularidade" class="architecture-diagram" style="max-width: 70%;">
+                <div class="metrics-grid" style="margin-top: 20px;">
+                    <div class="metric-card">
+                        <div class="metric-value">Low</div>
+                        <div class="metric-label">0-33: Músicas menos populares</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">Medium</div>
+                        <div class="metric-label">34-66: Popularidade moderada</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">High</div>
+                        <div class="metric-label">67-100: Músicas muito populares</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9C: Matriz de Correlação -->
+            <section>
+                <h2><i class="fas fa-th"></i> Matriz de Correlação das Features</h2>
+                <img src="assets/screenshots/analysis/correlation_heatmap.png" alt="Matriz Correlação" class="architecture-diagram">
+                <div class="highlight-box" style="margin-top: 15px;">
+                    <p style="font-size: 0.85em; text-align: center;">
+                        <strong>Correlações mais fortes:</strong> Loudness e Energy têm maior correlação com popularidade.
+                        Acousticness apresenta correlação negativa.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 9D: Correlações com Popularidade -->
+            <section>
+                <h2><i class="fas fa-signal"></i> Correlações com Popularidade</h2>
+                <img src="assets/screenshots/analysis/feature_correlations.png" alt="Correlações Features" class="architecture-diagram">
+                <div style="margin-top: 20px;">
+                    <ul class="feature-list" style="font-size: 0.85em;">
+                        <li><strong>Positivas:</strong> Loudness (+0.49), Energy (+0.22), Danceability (+0.13)</li>
+                        <li><strong>Negativas:</strong> Acousticness (-0.07)</li>
+                        <li><strong>Neutras:</strong> Tempo, Liveness, Speechiness (próximas de zero)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 9E: Distribuição das Features (Boxplots) -->
+            <section>
+                <h2><i class="fas fa-box"></i> Distribuição das Features Musicais</h2>
+                <img src="assets/screenshots/analysis/features_boxplot.png" alt="Boxplots Features" class="architecture-diagram">
+                <div class="highlight-box" style="margin-top: 15px;">
+                    <p style="font-size: 0.85em; text-align: center;">
+                        <strong>Boxplots mostram:</strong> Mediana, quartis, outliers e range de cada feature.
+                        Útil para identificar padrões e valores atípicos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 9F: Danceability vs Popularidade -->
+            <section>
+                <h2><i class="fas fa-music"></i> Danceability vs Popularidade</h2>
+                <img src="assets/screenshots/analysis/danceability_popularity_scatter.png" alt="Danceability Scatter" class="architecture-diagram">
+                <div class="metrics-grid" style="margin-top: 20px;">
+                    <div class="metric-card">
+                        <div class="metric-value">+0.134</div>
+                        <div class="metric-label">Correlação Positiva Fraca</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">~15.6%</div>
+                        <div class="metric-label">Importância no Modelo</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9G: Energy vs Popularidade -->
+            <section>
+                <h2><i class="fas fa-bolt"></i> Energy vs Popularidade</h2>
+                <img src="assets/screenshots/analysis/energy_popularity_scatter.png" alt="Energy Scatter" class="architecture-diagram">
+                <div class="metrics-grid" style="margin-top: 20px;">
+                    <div class="metric-card">
+                        <div class="metric-value">+0.220</div>
+                        <div class="metric-label">Correlação Positiva Fraca</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">~19.8%</div>
+                        <div class="metric-label">Importância no Modelo</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9H: Loudness vs Popularidade -->
+            <section>
+                <h2><i class="fas fa-volume-up"></i> Loudness vs Popularidade</h2>
+                <img src="assets/screenshots/analysis/loudness_popularity_scatter.png" alt="Loudness Scatter" class="architecture-diagram">
+                <div class="metrics-grid" style="margin-top: 20px;">
+                    <div class="metric-card">
+                        <div class="metric-value">+0.492</div>
+                        <div class="metric-label">Correlação Positiva Moderada</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">~28.5%</div>
+                        <div class="metric-label">Feature Mais Importante!</div>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <p style="text-align: center; font-size: 0.9em;">
+                        <i class="fas fa-star" style="color: #FFD700;"></i>
+                        <strong>Loudness é a característica mais influente na popularidade!</strong>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 9I: Resumo Visual das Análises -->
+            <section>
+                <h2><i class="fas fa-images"></i> Galeria de Análises Visuais</h2>
+                <div class="screenshot-grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/correlation_heatmap.png" alt="Correlações">
+                        <div class="screenshot-caption">Matriz de Correlação</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/popularity_histogram.png" alt="Distribuição">
+                        <div class="screenshot-caption">Distribuição Popularidade</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/feature_correlations.png" alt="Features">
+                        <div class="screenshot-caption">Correlações Features</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/loudness_popularity_scatter.png" alt="Loudness">
+                        <div class="screenshot-caption">Loudness vs Popularidade</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/xgb_feature_importance.png" alt="Importância">
+                        <div class="screenshot-caption">Feature Importance</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="assets/screenshots/analysis/model_comparison.png" alt="Modelos">
+                        <div class="screenshot-caption">Comparação Modelos</div>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <p style="text-align: center; font-size: 0.85em;">
+                        <strong>Todas as análises visuais foram geradas!</strong> Use as setas para ver cada gráfico em detalhes.
+                    </p>
+                </div>
             </section>
 
             <!-- Slide 9: Modelos Treinados -->
@@ -545,8 +818,8 @@
 
             <!-- Slide 10: Feature Importance -->
             <section>
-                <h2><i class="fas fa-chart-bar"></i> Features Mais Importantes</h2>
-                <img src="assets/screenshots/feature_analysis.png" alt="Feature Importance" class="architecture-diagram">
+                <h2><i class="fas fa-chart-bar"></i> Features Mais Importantes (XGBoost)</h2>
+                <img src="assets/screenshots/analysis/xgb_feature_importance.png" alt="Feature Importance" class="architecture-diagram">
                 <div class="highlight-box" style="margin-top: 20px;">
                     <ol style="font-size: 0.9em;">
                         <li><strong>Loudness (28.5%)</strong> - Volume é o fator mais relevante</li>
@@ -555,6 +828,18 @@
                         <li><strong>Valence (12.4%)</strong> - Positividade musical é relevante</li>
                         <li><strong>Acousticness (8.9%)</strong> - Músicas menos acústicas performam melhor</li>
                     </ol>
+                </div>
+            </section>
+
+            <!-- Slide 10B: Comparação Visual de Modelos -->
+            <section>
+                <h2><i class="fas fa-balance-scale"></i> Comparação Visual de Modelos</h2>
+                <img src="assets/screenshots/analysis/model_comparison.png" alt="Comparação Modelos" class="architecture-diagram">
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <p style="font-size: 0.9em; text-align: center;">
+                        <strong>XGBoost apresenta os melhores resultados:</strong><br>
+                        Menor erro (MAE = 12.48) e maior variância explicada (R² = 0.254)
+                    </p>
                 </div>
             </section>
 
