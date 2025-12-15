@@ -291,6 +291,7 @@ open htmlcov/index.html  # Linux/Mac
 
 ## 🎯 Competências Demonstradas
 
+### Técnicas de Machine Learning
 ✅ Análise Exploratória de Dados (EDA)  
 ✅ Visualização de Dados  
 ✅ Feature Engineering  
@@ -299,7 +300,25 @@ open htmlcov/index.html  # Linux/Mac
 ✅ Sistemas de Recomendação  
 ✅ Avaliação e Comparação de Modelos  
 ✅ Interpretação de Resultados  
+
+### Engenharia de Software
+✅ Arquitetura de Software (Modular e Escalável)  
+✅ API REST (FastAPI)  
+✅ Web Development (Streamlit)  
+✅ Testes Automatizados (pytest)  
+✅ CI/CD (GitHub Actions)  
+✅ Containerização (Docker)  
+✅ Documentação Técnica  
+✅ Type Hints e Validação (Pydantic)  
+✅ Logging e Monitoramento  
+✅ Git/GitHub  
+
+### Habilidades Acadêmicas
+✅ Metodologia CRISP-DM  
+✅ Pesquisa Bibliográfica  
+✅ Análise Crítica de Resultados  
 ✅ Comunicação Técnica  
+✅ Apresentação de Resultados  
 
 ---
 
@@ -355,10 +374,25 @@ open htmlcov/index.html  # Linux/Mac
 
 ## 📖 Referências
 
+### Livros
 - GERON, A. *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*. O'Reilly, 2022.
-- Spotify Web API Documentation
-- Scikit-learn Documentation
-- XGBoost Documentation
+- LESKOVEC, J.; RAJARAMAN, A.; ULLMAN, J. *Mining of Massive Datasets*. Cambridge University Press, 2020.
+- HASTIE, T.; TIBSHIRANI, R.; FRIEDMAN, J. *The Elements of Statistical Learning*. Springer, 2009.
+
+### Artigos Científicos
+- CHEN, T.; GUESTRIN, C. *XGBoost: A Scalable Tree Boosting System*. KDD, 2016.
+- PEDREGOSA, F. et al. *Scikit-learn: Machine Learning in Python*. JMLR, 2011.
+- BREIMAN, L. *Random Forests*. Machine Learning, 2001.
+
+### Documentação Técnica
+- [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
+- [Scikit-learn Documentation](https://scikit-learn.org/)
+- [XGBoost Documentation](https://xgboost.readthedocs.io/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+
+### Referências Completas
+📚 Veja arquivo completo em formato BibTeX: [`docs/references.bib`](docs/references.bib)
 
 ---
 
@@ -367,6 +401,14 @@ open htmlcov/index.html  # Linux/Mac
 **Geyson de Araujo**  
 GitHub: [@tavs-coelho](https://github.com/tavs-coelho)  
 Repositório: [An-lise-Spotify](https://github.com/tavs-coelho/An-lise-Spotify)
+
+## 📑 Documentação Adicional
+
+- 📖 [Guia de Uso Completo](docs/USAGE.md)
+- 🌐 [Documentação da API](docs/API.md)
+- 🏗️ [Arquitetura do Sistema](docs/ARCHITECTURE.md)
+- 📊 [Apresentação do Projeto](docs/PRESENTATION.md)
+- 📚 [Referências Bibliográficas](docs/references.bib)
 
 ---
 
