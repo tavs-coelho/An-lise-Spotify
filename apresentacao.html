@@ -467,9 +467,11 @@
             height: 300px;
         }
 
-        /* Smooth scroll for table of contents */
-        html {
-            scroll-behavior: smooth;
+        /* Smooth scroll for table of contents - respects user preferences */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
         }
 
         /* Improved responsive design for mobile */
@@ -505,7 +507,7 @@
         <div class="slides">
             
             <!-- Slide 1: Título -->
-            <section class="center-content" data-background-gradient="linear-gradient(135deg, #191414, #1DB954)" role="region" aria-label="Slide de título - Apresentação sobre Modelagem Preditiva de Popularidade Musical">
+            <section class="center-content" data-background-gradient="linear-gradient(135deg, #191414, #1DB954)" role="region" aria-label="Slide de título da apresentação">
                 <h1><i class="fas fa-music" aria-hidden="true"></i> Modelagem Preditiva de Popularidade Musical</h1>
                 <h3>Uma Abordagem Baseada em Machine Learning para Análise de Características Acústicas no Spotify</h3>
                 <div class="author-info" style="margin-top: 50px;">
@@ -685,9 +687,9 @@
             </section>
 
             <!-- Slide 6: Arquitetura do Sistema -->
-            <section role="region" aria-label="Slide sobre arquitetura do sistema">
+            <section role="region" aria-label="Arquitetura do sistema de análise">
                 <h2><i class="fas fa-sitemap" aria-hidden="true"></i> Arquitetura do Sistema</h2>
-                <img src="./assets/screenshots/architecture.png" alt="Diagrama de arquitetura do sistema mostrando pipeline de dados, modelos de ML e interfaces (API REST, Dashboard Streamlit e Jupyter Notebooks)" class="architecture-diagram" loading="lazy">
+                <img src="./assets/screenshots/architecture.png" alt="Diagrama de arquitetura com pipeline de dados, modelos ML e interfaces de apresentação" class="architecture-diagram" loading="lazy">
                 <div style="text-align: center; margin-top: 20px;">
                     <span class="spotify-badge">FastAPI REST API</span>
                     <span class="spotify-badge">Streamlit Dashboard</span>
@@ -822,7 +824,7 @@
             <!-- Slide 9A: Análise Exploratória - Distribuição da Popularidade -->
             <section role="region" aria-label="Análise exploratória - Distribuição da popularidade">
                 <h2><i class="fas fa-chart-area" aria-hidden="true"></i> EDA: Distribuição da Variável Target</h2>
-                <img src="./assets/screenshots/analysis/popularity_histogram.png" alt="Histograma mostrando distribuição assimétrica à direita da popularidade com média em 38 pontos, concentração em baixa-média popularidade e cauda longa indicando raridade de alta popularidade" class="architecture-diagram" loading="lazy">
+                <img src="./assets/screenshots/analysis/popularity_histogram.png" alt="Histograma de distribuição da popularidade musical com concentração em valores baixos e média de 38 pontos" class="architecture-diagram" loading="lazy">
                 <div class="highlight-box" style="margin-top: 20px;">
                     <ul style="font-size: 0.9em;">
                         <li><strong>Medida de Tendência Central:</strong> Média ≈ 38 pontos (mediana próxima)</li>
@@ -1050,7 +1052,7 @@
             <!-- Slide 10: Feature Importance -->
             <section role="region" aria-label="Análise de importância das features do modelo XGBoost">
                 <h2><i class="fas fa-chart-bar" aria-hidden="true"></i> Interpretabilidade: Feature Importance (XGBoost)</h2>
-                <img src="./assets/screenshots/analysis/xgb_feature_importance.png" alt="Gráfico de barras horizontais mostrando importância das features: Loudness 28.5%, Energy 19.8%, Danceability 15.6%, Valence 12.4%, Acousticness 8.9% e outras features com menor importância" class="architecture-diagram" loading="lazy">
+                <img src="./assets/screenshots/analysis/xgb_feature_importance.png" alt="Gráfico de importância das características com Loudness, Energy e Danceability como principais fatores" class="architecture-diagram" loading="lazy">
                 <div class="highlight-box" style="margin-top: 20px;">
                     <ol style="font-size: 0.9em;">
                         <li><strong>Loudness (28.5%)</strong> - Volume médio é o preditor dominante, confirmando sua forte correlação linear</li>
@@ -1613,7 +1615,7 @@ An-lise-Spotify/<br>
             <i class="fas fa-keyboard"></i> Navegação: <strong>← →</strong> | <strong>?</strong> para ajuda
         </div>
         <div class="footer-center" id="slide-counter">
-            Slide 1/40
+            Carregando...
         </div>
         <div class="footer-right">
             <strong>F</strong> tela cheia | <strong>ESC</strong> visão geral
