@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análise Preditiva de Popularidade Musical no Spotify - Apresentação Acadêmica</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Análise de Machine Learning para predição de popularidade de músicas no Spotify usando características acústicas. Apresentação acadêmica completa com 40 slides.">
+    <meta name="keywords" content="Spotify, Machine Learning, Análise de Dados, Popularidade Musical, Python, XGBoost, CRISP-DM">
+    <meta name="author" content="Geyson de Araujo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/tavs-coelho/An-lise-Spotify">
+    <meta property="og:title" content="Análise Preditiva de Popularidade Musical no Spotify">
+    <meta property="og:description" content="Machine Learning aplicado à predição de popularidade musical no Spotify. Metodologia CRISP-DM, 6 modelos de ML, análise de 113.999 músicas.">
+    <meta property="og:image" content="./assets/screenshots/results_summary.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/tavs-coelho/An-lise-Spotify">
+    <meta property="twitter:title" content="Análise Preditiva de Popularidade Musical no Spotify">
+    <meta property="twitter:description" content="Machine Learning aplicado à predição de popularidade musical no Spotify">
+    <meta property="twitter:image" content="./assets/screenshots/results_summary.png">
+    
     <!-- Reveal.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/black.css" id="theme">
@@ -276,6 +295,209 @@
             margin-top: 8px;
             text-align: center;
         }
+
+        /* Print styles */
+        @media print {
+            .reveal .footer {
+                display: none;
+            }
+            
+            .reveal .slides section {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            
+            .reveal h1, .reveal h2, .reveal h3 {
+                color: #1DB954 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .reveal .spotify-badge, 
+            .reveal .badge-success,
+            .reveal .badge-info,
+            .reveal .badge-warning {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Help overlay styles */
+        .help-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(25, 20, 20, 0.95);
+            border: 3px solid var(--spotify-green);
+            border-radius: 15px;
+            padding: 30px;
+            z-index: 10000;
+            display: none;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(29, 185, 84, 0.5);
+        }
+
+        .help-overlay.visible {
+            display: block;
+        }
+
+        .help-overlay h3 {
+            color: var(--spotify-green);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .help-overlay ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .help-overlay li {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(29, 185, 84, 0.1);
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .help-overlay kbd {
+            background: var(--spotify-green);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .help-overlay .close-help {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* Enhanced footer */
+        .reveal .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            font-size: 0.6em;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(25, 20, 20, 0.8);
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        .reveal .footer .footer-left {
+            flex: 1;
+        }
+
+        .reveal .footer .footer-center {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            color: var(--spotify-green);
+        }
+
+        .reveal .footer .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Improved accessibility for screen readers */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Loading indicator */
+        .loading-indicator {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: var(--spotify-green);
+            z-index: 9999;
+            display: none;
+        }
+
+        .loading-indicator.visible {
+            display: block;
+        }
+
+        /* Improved hover effects */
+        .reveal .tech-item,
+        .reveal .metric-card {
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reveal .tech-item::before,
+        .reveal .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(29, 185, 84, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .reveal .tech-item:hover::before,
+        .reveal .metric-card:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Smooth scroll for table of contents */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Improved responsive design for mobile */
+        @media (max-width: 768px) {
+            .reveal h1 {
+                font-size: 1.8em;
+            }
+
+            .reveal .metrics-grid,
+            .reveal .tech-stack {
+                grid-template-columns: 1fr;
+            }
+
+            .reveal .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reveal .footer {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .reveal .footer .footer-left,
+            .reveal .footer .footer-center,
+            .reveal .footer .footer-right {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -283,8 +505,8 @@
         <div class="slides">
             
             <!-- Slide 1: Título -->
-            <section class="center-content" data-background-gradient="linear-gradient(135deg, #191414, #1DB954)">
-                <h1><i class="fas fa-music"></i> Modelagem Preditiva de Popularidade Musical</h1>
+            <section class="center-content" data-background-gradient="linear-gradient(135deg, #191414, #1DB954)" role="region" aria-label="Slide de título - Apresentação sobre Modelagem Preditiva de Popularidade Musical">
+                <h1><i class="fas fa-music" aria-hidden="true"></i> Modelagem Preditiva de Popularidade Musical</h1>
                 <h3>Uma Abordagem Baseada em Machine Learning para Análise de Características Acústicas no Spotify</h3>
                 <div class="author-info" style="margin-top: 50px;">
                     <div>
@@ -294,15 +516,15 @@
                     </div>
                 </div>
                 <div style="margin-top: 40px;">
-                    <span class="badge-success"><i class="fab fa-github"></i> Repositório Open Source</span>
-                    <span class="badge-info"><i class="fas fa-code"></i> Python 3.8+</span>
-                    <span class="badge-warning"><i class="fas fa-brain"></i> Machine Learning</span>
+                    <span class="badge-success"><i class="fab fa-github" aria-hidden="true"></i> Repositório Open Source</span>
+                    <span class="badge-info"><i class="fas fa-code" aria-hidden="true"></i> Python 3.8+</span>
+                    <span class="badge-warning"><i class="fas fa-brain" aria-hidden="true"></i> Machine Learning</span>
                 </div>
             </section>
 
             <!-- Slide 2: Agenda -->
-            <section>
-                <h2><i class="fas fa-list"></i> Estrutura da Apresentação</h2>
+            <section role="region" aria-label="Slide de agenda - Estrutura da apresentação">
+                <h2><i class="fas fa-list" aria-hidden="true"></i> Estrutura da Apresentação</h2>
                 <ul class="feature-list" style="font-size: 0.85em;">
                     <li>Introdução: Contexto e Motivação da Pesquisa</li>
                     <li>Fundamentação Teórica: Metodologia CRISP-DM</li>
@@ -463,14 +685,20 @@
             </section>
 
             <!-- Slide 6: Arquitetura do Sistema -->
-            <section>
-                <h2><i class="fas fa-sitemap"></i> Arquitetura do Sistema</h2>
-                <img src="./assets/screenshots/architecture.png" alt="Arquitetura" class="architecture-diagram">
+            <section role="region" aria-label="Slide sobre arquitetura do sistema">
+                <h2><i class="fas fa-sitemap" aria-hidden="true"></i> Arquitetura do Sistema</h2>
+                <img src="./assets/screenshots/architecture.png" alt="Diagrama de arquitetura do sistema mostrando pipeline de dados, modelos de ML e interfaces (API REST, Dashboard Streamlit e Jupyter Notebooks)" class="architecture-diagram" loading="lazy">
                 <div style="text-align: center; margin-top: 20px;">
                     <span class="spotify-badge">FastAPI REST API</span>
                     <span class="spotify-badge">Streamlit Dashboard</span>
                     <span class="spotify-badge">Python Library</span>
                 </div>
+                <aside class="notes">
+                    A arquitetura segue um design modular com três camadas principais:
+                    1. Camada de dados e pré-processamento
+                    2. Camada de modelos de Machine Learning
+                    3. Camada de apresentação (API, Dashboard, Notebooks)
+                </aside>
             </section>
 
             <!-- Slide 7: Stack Tecnológico -->
@@ -592,9 +820,9 @@
             </section>
 
             <!-- Slide 9A: Análise Exploratória - Distribuição da Popularidade -->
-            <section>
-                <h2><i class="fas fa-chart-area"></i> EDA: Distribuição da Variável Target</h2>
-                <img src="./assets/screenshots/analysis/popularity_histogram.png" alt="Histograma da Distribuição de Popularidade" class="architecture-diagram">
+            <section role="region" aria-label="Análise exploratória - Distribuição da popularidade">
+                <h2><i class="fas fa-chart-area" aria-hidden="true"></i> EDA: Distribuição da Variável Target</h2>
+                <img src="./assets/screenshots/analysis/popularity_histogram.png" alt="Histograma mostrando distribuição assimétrica à direita da popularidade com média em 38 pontos, concentração em baixa-média popularidade e cauda longa indicando raridade de alta popularidade" class="architecture-diagram" loading="lazy">
                 <div class="highlight-box" style="margin-top: 20px;">
                     <ul style="font-size: 0.9em;">
                         <li><strong>Medida de Tendência Central:</strong> Média ≈ 38 pontos (mediana próxima)</li>
@@ -603,6 +831,9 @@
                         <li><strong>Observação:</strong> Cauda longa à direita indica raridade de alta popularidade (>70)</li>
                     </ul>
                 </div>
+                <aside class="notes">
+                    A distribuição é típica de popularidade em plataformas de streaming: a maioria das músicas tem popularidade baixa a moderada, enquanto apenas uma pequena fração alcança alta popularidade. Isso reflete o fenômeno da "cauda longa" no consumo de mídia digital.
+                </aside>
             </section>
 
             <!-- Slide 9B: Categorias de Popularidade -->
@@ -817,9 +1048,9 @@
             </section>
 
             <!-- Slide 10: Feature Importance -->
-            <section>
-                <h2><i class="fas fa-chart-bar"></i> Interpretabilidade: Feature Importance (XGBoost)</h2>
-                <img src="./assets/screenshots/analysis/xgb_feature_importance.png" alt="Gráfico de Importância das Features" class="architecture-diagram">
+            <section role="region" aria-label="Análise de importância das features do modelo XGBoost">
+                <h2><i class="fas fa-chart-bar" aria-hidden="true"></i> Interpretabilidade: Feature Importance (XGBoost)</h2>
+                <img src="./assets/screenshots/analysis/xgb_feature_importance.png" alt="Gráfico de barras horizontais mostrando importância das features: Loudness 28.5%, Energy 19.8%, Danceability 15.6%, Valence 12.4%, Acousticness 8.9% e outras features com menor importância" class="architecture-diagram" loading="lazy">
                 <div class="highlight-box" style="margin-top: 20px;">
                     <ol style="font-size: 0.9em;">
                         <li><strong>Loudness (28.5%)</strong> - Volume médio é o preditor dominante, confirmando sua forte correlação linear</li>
@@ -832,6 +1063,9 @@
                 <div style="text-align: center; margin-top: 15px;">
                     <span class="badge-warning">As 3 principais features explicam ~64% da importância total do modelo</span>
                 </div>
+                <aside class="notes">
+                    Esta análise de feature importance foi calculada usando o método de ganho do XGBoost. Loudness domina claramente, seguido por Energy e Danceability. Juntas, essas três características representam quase dois terços do poder preditivo do modelo, sugerindo que músicas mais altas, energéticas e dançantes têm maior probabilidade de serem populares.
+                </aside>
             </section>
 
             <!-- Slide 10B: Comparação Visual de Modelos -->
@@ -1236,11 +1470,154 @@ An-lise-Spotify/<br>
                 console.log('💡 Dica: Pressione F para tela cheia!');
             }
         }, 2000);
+
+        // Help overlay functionality
+        const helpOverlay = document.getElementById('help-overlay');
+        let helpVisible = false;
+
+        // Toggle help with ? or H key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '?' || e.key === 'h' || e.key === 'H') {
+                e.preventDefault();
+                helpVisible = !helpVisible;
+                helpOverlay.classList.toggle('visible', helpVisible);
+            }
+            if (e.key === 'Escape' && helpVisible) {
+                helpVisible = false;
+                helpOverlay.classList.remove('visible');
+            }
+        });
+
+        // Close help overlay on click
+        helpOverlay.addEventListener('click', (e) => {
+            if (e.target === helpOverlay) {
+                helpVisible = false;
+                helpOverlay.classList.remove('visible');
+            }
+        });
+
+        // Update slide counter in footer
+        Reveal.on('slidechanged', (event) => {
+            const currentSlide = event.indexh + 1;
+            const totalSlides = Reveal.getTotalSlides();
+            const slideCounter = document.getElementById('slide-counter');
+            if (slideCounter) {
+                slideCounter.textContent = `Slide ${currentSlide}/${totalSlides}`;
+            }
+        });
+
+        // Add loading indicator for images
+        const images = document.querySelectorAll('img');
+        let loadedImages = 0;
+        const totalImages = images.length;
+
+        images.forEach(img => {
+            if (img.complete) {
+                loadedImages++;
+            } else {
+                img.addEventListener('load', () => {
+                    loadedImages++;
+                    if (loadedImages === totalImages) {
+                        console.log('✅ Todas as imagens carregadas!');
+                    }
+                });
+            }
+        });
+
+        // Keyboard shortcut for print
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+
+        // Add smooth transitions for hover effects
+        document.querySelectorAll('.tech-item, .metric-card').forEach(el => {
+            el.style.transition = 'all 0.3s ease';
+        });
+
+        // Initialize footer counter
+        setTimeout(() => {
+            const currentSlide = Reveal.getIndices().h + 1;
+            const totalSlides = Reveal.getTotalSlides();
+            const slideCounter = document.getElementById('slide-counter');
+            if (slideCounter) {
+                slideCounter.textContent = `Slide ${currentSlide}/${totalSlides}`;
+            }
+        }, 100);
     </script>
 
-    <!-- Footer com navegação -->
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loading-indicator">
+        <i class="fas fa-spinner fa-spin"></i> Carregando...
+    </div>
+
+    <!-- Help Overlay -->
+    <div class="help-overlay" id="help-overlay">
+        <h3><i class="fas fa-keyboard"></i> Atalhos de Teclado</h3>
+        <ul>
+            <li>
+                <span>Próximo slide</span>
+                <kbd>→</kbd> ou <kbd>Space</kbd>
+            </li>
+            <li>
+                <span>Slide anterior</span>
+                <kbd>←</kbd>
+            </li>
+            <li>
+                <span>Primeira slide</span>
+                <kbd>Home</kbd>
+            </li>
+            <li>
+                <span>Última slide</span>
+                <kbd>End</kbd>
+            </li>
+            <li>
+                <span>Tela cheia</span>
+                <kbd>F</kbd>
+            </li>
+            <li>
+                <span>Visão geral</span>
+                <kbd>ESC</kbd> ou <kbd>O</kbd>
+            </li>
+            <li>
+                <span>Zoom</span>
+                <kbd>Alt</kbd> + Click
+            </li>
+            <li>
+                <span>Modo apresentador</span>
+                <kbd>S</kbd>
+            </li>
+            <li>
+                <span>Pausar</span>
+                <kbd>B</kbd> ou <kbd>.</kbd>
+            </li>
+            <li>
+                <span>Imprimir</span>
+                <kbd>Ctrl</kbd> + <kbd>P</kbd>
+            </li>
+            <li>
+                <span>Esta ajuda</span>
+                <kbd>?</kbd> ou <kbd>H</kbd>
+            </li>
+        </ul>
+        <div class="close-help">
+            Pressione <kbd>ESC</kbd> ou clique fora para fechar
+        </div>
+    </div>
+
+    <!-- Footer com navegação aprimorado -->
     <div class="footer">
-        Navegação: ← → | Tela cheia: F | Zoom: Alt+Click | Visão geral: ESC
+        <div class="footer-left">
+            <i class="fas fa-keyboard"></i> Navegação: <strong>← →</strong> | <strong>?</strong> para ajuda
+        </div>
+        <div class="footer-center" id="slide-counter">
+            Slide 1/40
+        </div>
+        <div class="footer-right">
+            <strong>F</strong> tela cheia | <strong>ESC</strong> visão geral
+        </div>
     </div>
 </body>
 </html>
