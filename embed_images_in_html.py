@@ -5,7 +5,6 @@ This fixes the issue where images don't render when the HTML is downloaded.
 """
 import base64
 import re
-import os
 from pathlib import Path
 
 
@@ -72,11 +71,19 @@ def embed_images_in_html(html_path, output_path=None):
         else:
             print(f"Warning: Image not found: {image_path}")
     
-    # Apply replacements
-    for original_path, base64_data in replacements.items():
-        # Replace both single and double quote versions
-        html_content = html_content.replace(f'src="{original_path}"', f'src="{base64_data}"')
-        html_content = html_content.replace(f"src='{original_path}'", f"src='{base64_data}'")
+    # Apply replacements using regex for efficiency
+    def replace_func(match):
+        original_path = match.group(1)
+        if original_path in replacements:
+            return f'src="{replacements[original_path]}"'
+        return match.group(0)
+    
+    html_content = re.sub(
+        r'src=["\'](\./[^"\']+\.(?:png|jpg|jpeg|gif|svg))["\']',
+        replace_func,
+        html_content,
+        flags=re.IGNORECASE
+    )
     
     # Write the updated HTML
     with open(output_path, 'w', encoding='utf-8') as f:

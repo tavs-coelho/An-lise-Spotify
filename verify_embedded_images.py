@@ -14,7 +14,7 @@ def verify_embedded_images(html_path):
         html_content = f.read()
     
     # Count base64 images
-    base64_images = len(re.findall(r'src="data:image/[^"]+base64,[^"]+"', html_content))
+    base64_images = len(re.findall(r'src=["\']data:image/[^"\']+base64,[^"\']+["\']', html_content))
     
     # Check for any remaining relative paths
     relative_paths = re.findall(r'src=["\'](\./[^"\']+\.(?:png|jpg|jpeg|gif|svg))["\']', html_content, re.IGNORECASE)
